@@ -8,14 +8,16 @@ export default function Header() {
             <div className="container mx-auto">
                 <div className="flex flex-col justify-between items-center gap-y-6 lg:flex-row">
                     <Link to="/">
-                        <span className="h2">patrick lisiecki</span>
+                        <span className="text-5xl text-primary font-[600]">patrick</span>
+                        <span className="text-5xl text-primary font-[400] ml-3">lisiecki</span>
+                        <span className="text-5xl text-accent">.</span>
                     </Link>
                     <div className="flex items-center gap-x-5 text-3xl">
                         <a
                             href="https://www.linkedin.com/in/patricklisiecki"
                             target="_blank"
                             rel="noreferrer"
-                            className="hover:text-sky-400 transition-all duration-300"
+                            className="hover:text-accent transition-all duration-300"
                         >
                             <FaLinkedin />
                         </a>
@@ -23,7 +25,7 @@ export default function Header() {
                             href="https://github.com/PatrickLisiecki"
                             target="_blank"
                             rel="noreferrer"
-                            className="hover:text-sky-400 transition-all duration-300"
+                            className="hover:text-accent transition-all duration-300"
                         >
                             <FaSquareGithub />
                         </a>

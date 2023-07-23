@@ -1,26 +1,27 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
-import { BiHomeAlt2, BiUser } from "react-icons/bi";
-import { BsBriefcase, BsChatSquare } from "react-icons/bs";
 import { Link } from "react-router-dom";
+
+import { HiHome, HiUser, HiRectangleGroup, HiViewColumns, HiEnvelope } from "react-icons/hi2";
 
 const navData = [
     {
-        icon: <BiHomeAlt2 />,
+        icon: <HiHome />,
         title: "Home",
         link: "/",
     },
     {
-        icon: <BiUser />,
+        icon: <HiUser />,
         title: "About",
         link: "/about",
     },
     {
-        icon: <BsBriefcase />,
+        icon: <HiViewColumns />,
         title: "Projects",
         link: "/projects",
     },
     {
-        icon: <BsChatSquare />,
+        icon: <HiEnvelope />,
         title: "Contact",
         link: "/contact",
     },
@@ -38,8 +39,8 @@ export default function Nav() {
                             key={index}
                             to={item.link}
                             className={`${
-                                active === index ? "text-sky-400" : "text-white"
-                            } relative flex items-center group hover:text-sky-400 transition-all duration-300`}
+                                active === index ? "text-accent" : "text-white"
+                            } relative flex items-center group hover:text-accent transition-all duration-300`}
                             onClick={() => setActive(index)}
                         >
                             <div className="absolute pr-14 right-0 hidden xl:group-hover:flex">

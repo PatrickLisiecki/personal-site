@@ -1,18 +1,16 @@
 import Nav from "./components/Nav";
 import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Projects from "./components/Projects";
+import Header from "./components/Header";
+import { Outlet } from "react-router-dom";
 
 function App() {
     return (
-        <div className="w-full min-h-screen bg-white">
+        <main className="w-full min-h-screen bg-white">
             <Nav />
-            <Home />
-            <About />
-            <Projects />
-            <Contact />
-        </div>
+            <Header />
+            {/* <Home /> */}
+            <Outlet />
+        </main>
     );
 }
 

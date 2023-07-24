@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+
 import { useState } from "react";
 
 // Icons
@@ -7,27 +8,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Nav links
 const navData = [
     {
-        icon: <FontAwesomeIcon icon="fa-solid fa-house" />,
         title: "Home",
         link: "#home",
     },
     {
-        icon: <FontAwesomeIcon icon="fa-solid fa-user-astronaut" />,
         title: "About",
         link: "#about",
     },
     {
-        icon: <FontAwesomeIcon icon="fa-regular fa-message" />,
         title: "Skills",
         link: "#skills",
     },
     {
-        icon: <FontAwesomeIcon icon="fa-solid fa-diagram-project" />,
         title: "Projects",
         link: "#projects",
     },
     {
-        icon: <FontAwesomeIcon icon="fa-regular fa-message" />,
         title: "Contact",
         link: "#contact",
     },

@@ -7,15 +7,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
     return (
-        <div className="section bg-gray-100" id="home">
-            <div className="container mx-auto py-32 flex flex-col justify-evenly items-center lg:flex-row">
+        <div className="section min-h-screen bg-gray-100" id="home">
+            <div className="container mx-auto flex flex-col justify-evenly items-center lg:flex-row">
                 <div className="max-w-[800px] flex flex-col justify-center text-center xl:pt-0 xl:text-left">
                     {/* Title */}
                     <span className="h1 mb-4">
                         Full-Stack Web Developer{" "}
                         <img
-                            src="src/assets/fire.png"
-                            alt="Flame"
+                            src="src/assets/flash.png"
+                            alt="Flash"
                             width={70}
                             height={70}
                             className="inline-block"
@@ -41,10 +41,14 @@ export default function Home() {
                                 />
                             </button>
                         </a>
-                        <a href="#projects">
-                            <button className="bg-none border border-primary min-w-[140px] max-w-[180px] px-4 py-3 transition-all duration-300 flex items-center justify-center overflow-hidden group">
+                        <a
+                            href="https://drive.google.com/file/d/1a0hWESwTMwDCh3WbXm8dnkfI1PZF57WG/view?usp=drive_link"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <button className="bg-none border border-primary min-w-[120px] max-w-[180px] px-4 py-3 transition-all duration-300 flex items-center justify-center overflow-hidden group">
                                 <span className="text-primary group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                                    View Work
+                                    Resume
                                 </span>
                                 <FontAwesomeIcon
                                     icon="fa-solid fa-right-long"
@@ -53,6 +57,8 @@ export default function Home() {
                             </button>
                         </a>
                     </div>
+
+                    {/* Social Links */}
                     <div className="flex justify-center items-center gap-x-4 text-4xl xl:justify-start">
                         <a
                             href="https://www.linkedin.com/in/patricklisiecki"
@@ -74,8 +80,12 @@ export default function Home() {
                 </div>
 
                 {/* Animation / Image */}
-                <div className="max-w-[45%]">
-                    <Lottie animationData={animation} />
+                <div className="max-w-[400px] max-h-[375px] rounded-full border-3 border-primary overflow-hidden xl:max-w-[450px] xl:max-h-[425px]">
+                    <img
+                        className="h-auto max-w-full transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                        src="src/assets/pfp.png"
+                        alt="image description"
+                    />
                 </div>
             </div>
         </div>

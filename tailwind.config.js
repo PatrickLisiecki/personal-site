@@ -18,8 +18,8 @@ module.exports = {
         },
         extend: {
             colors: {
-                primary: "#000",
-                secondary: "#ccc",
+                primary: "#333333",
+                secondary: "#999999",
                 accent: "#38BDF8",
             },
             boxShadow: {

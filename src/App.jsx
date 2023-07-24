@@ -11,29 +11,9 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-import {
-    faHouse,
-    faUserAstronaut,
-    faDiagramProject,
-    faMessage,
-    faXmark,
-    faSquareArrowUpRight,
-    faArrowRightLong,
-    faRightLong,
-} from "@fortawesome/free-solid-svg-icons";
+import { faXmark, faRightLong } from "@fortawesome/free-solid-svg-icons";
 
-library.add(
-    faGithub,
-    faLinkedin,
-    faHouse,
-    faUserAstronaut,
-    faDiagramProject,
-    faMessage,
-    faXmark,
-    faSquareArrowUpRight,
-    faArrowRightLong,
-    faRightLong
-);
+library.add(faGithub, faLinkedin, faXmark, faRightLong);
 
 function App() {
     return (

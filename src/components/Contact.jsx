@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Contact() {
     return (
-        <div className="section" id="contact">
+        <div className="section bg-gray-100" id="contact">
             <div className="container mx-auto text-center xl:text-left flex items-center justify-center">
                 <div className="flex flex-col w-full max-w-[700px]">
                     {/* Heading */}

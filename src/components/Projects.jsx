@@ -31,7 +31,7 @@ const projectsData = [
 
 export default function Projects() {
     return (
-        <div className="section bg-gray-100" id="projects">
+        <div className="section" id="projects">
             <div className="container mx-auto">
                 <div className="flex flex-col items-center justify-center xl:flex-row gap-x-8">
                     <div className="flex flex-col items-center xl:items-start text-center mb-4 xl:w-[35vw] xl:mb-0 lg:text-left">

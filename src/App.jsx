@@ -4,6 +4,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Skills from "./components/Skills";
 
 // Global Icons
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -40,6 +41,7 @@ function App() {
             <Navbar />
             <Home />
             <About />
+            <Skills />
             <Projects />
             <Contact />
             <Footer />

@@ -1,13 +1,48 @@
-import Nav from "./components/Nav";
-import Header from "./components/Header";
-import { Outlet } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+
+// Global Icons
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
+import {
+    faHouse,
+    faUserAstronaut,
+    faDiagramProject,
+    faMessage,
+    faXmark,
+    faSquareArrowUpRight,
+    faArrowRightLong,
+    faRightLong,
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(
+    faGithub,
+    faLinkedin,
+    faHouse,
+    faUserAstronaut,
+    faDiagramProject,
+    faMessage,
+    faXmark,
+    faSquareArrowUpRight,
+    faArrowRightLong,
+    faRightLong
+);
 
 function App() {
     return (
-        <main className="page relative bg-site bg-cover bg-no-repeat">
-            <Nav />
-            <Header />
-            <Outlet />
+        <main className="page relative">
+            <Navbar />
+            <Home />
+            <About />
+            <Projects />
+            <Contact />
+            <Footer />
         </main>
     );
 }

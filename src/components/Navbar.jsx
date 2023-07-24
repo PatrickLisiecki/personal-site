@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 
+// Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+// Nav links
 const navData = [
     {
         icon: <FontAwesomeIcon icon="fa-solid fa-house" />,
@@ -15,6 +17,11 @@ const navData = [
         link: "#about",
     },
     {
+        icon: <FontAwesomeIcon icon="fa-regular fa-message" />,
+        title: "Skills",
+        link: "#skills",
+    },
+    {
         icon: <FontAwesomeIcon icon="fa-solid fa-diagram-project" />,
         title: "Projects",
         link: "#projects",
@@ -22,7 +29,7 @@ const navData = [
     {
         icon: <FontAwesomeIcon icon="fa-regular fa-message" />,
         title: "Contact",
-        link: "#footer",
+        link: "#contact",
     },
 ];
 
@@ -34,14 +41,16 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="w-full fixed z-[999] bg-white shadow-bs p-8 md:p-8">
+        <nav className="w-full fixed z-[999] bg-white shadow-bs p-8">
             <div className="container mx-auto flex flex-row justify-between items-center">
+                {/* Name / Logo */}
                 <a href="#home" className="text-2xl md:text-3xl">
                     <span className="font-[500]">PATRICK</span>{" "}
                     <span className="font-[500]">LISIECKI</span>
                     <span className="text-accent">.</span>
                 </a>
 
+                {/* Nav links */}
                 <div className="hidden lg:block">
                     <ul className="flex flex-row">
                         {navData.map((item, index) => {
@@ -59,6 +68,7 @@ export default function Navbar() {
                     </ul>
                 </div>
 
+                {/* Mobile menu button */}
                 <div className="lg:hidden">
                     <button onClick={toggleMenu} className="text-primary">
                         <svg
@@ -88,6 +98,7 @@ export default function Navbar() {
                 </div>
             </div>
 
+            {/* Mobile menu */}
             <div
                 className={`${
                     isOpen ? "block" : "hidden"
@@ -95,7 +106,7 @@ export default function Navbar() {
             >
                 <button
                     onClick={toggleMenu}
-                    className="text-6xl text-primary hover:text-accent transition-all duration-300"
+                    className="text-4xl text-primary hover:text-accent transition-all duration-300"
                 >
                     <FontAwesomeIcon
                         icon="fa-solid fa-xmark"

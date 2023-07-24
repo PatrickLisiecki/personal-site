@@ -23,11 +23,7 @@ module.exports = {
                 accent: "#38BDF8",
             },
             boxShadow: {
-                // bs: "0 0 10px rgba(56, 189, 248, 0.5)",
-                bs: "0 0 10px rgba(0,0,0,.09)",
-            },
-            backgroundImage: {
-                site: 'url("src/assets/bg-site.svg")',
+                bs: "0 0 10px rgba(0,0,0,.1)",
             },
         },
     },

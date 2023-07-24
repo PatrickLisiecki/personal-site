@@ -1,6 +1,7 @@
-import { BsArrowRight } from "react-icons/bs";
-import { RiArrowRightUpLine } from "react-icons/ri";
+// Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+// Projects data
 const projectsData = [
     {
         genre: "Frontend",
@@ -30,7 +31,7 @@ const projectsData = [
 
 export default function Projects() {
     return (
-        <div className="h-full flex items-center">
+        <div className="section bg-gray-100" id="projects">
             <div className="container mx-auto">
                 <div className="flex flex-col items-center justify-center xl:flex-row gap-x-8">
                     <div className="flex flex-col items-center xl:items-start text-center mb-4 xl:w-[35vw] xl:mb-0 lg:text-left">
@@ -44,11 +45,17 @@ export default function Projects() {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <button className="btn btn-sm rounded-full border border-primary max-w-[200px] transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group">
-                                <span className="text-primary text-[18px] font-poppins group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
+                            <button
+                                className="bg-none border border-primary px-8 py-2 transition-all duration-300 flex items-center justify-center overflow-hidden group
+                            hover:border-accent"
+                            >
+                                <span className="text-primary group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                                     View all projects
                                 </span>
-                                <RiArrowRightUpLine className="text-primary -translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]" />
+                                <FontAwesomeIcon
+                                    icon="fa-solid fa-right-long"
+                                    className="text-primary -translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]"
+                                />
                             </button>
                         </a>
                     </div>
@@ -63,7 +70,7 @@ export default function Projects() {
                                         className="block"
                                         key={index}
                                     >
-                                        <div className="bg-gray-100 p-4 flex items-center justify-center">
+                                        <div className="bg-gray-200 p-4 flex items-center justify-center">
                                             <div className="flex items-center justify-center relative overflow-hidden group">
                                                 <img
                                                     src={item.image}
@@ -80,7 +87,7 @@ export default function Projects() {
                                                             CODE
                                                         </div>
                                                         <div className="text-xl text-white translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
-                                                            <BsArrowRight />
+                                                            <FontAwesomeIcon icon="fa-solid fa-right-long" />
                                                         </div>
                                                     </div>
                                                 </div>

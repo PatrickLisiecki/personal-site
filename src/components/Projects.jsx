@@ -33,34 +33,16 @@ export default function Projects() {
     return (
         <div className="section" id="projects">
             <div className="container mx-auto">
-                <div className="flex flex-col items-center justify-center xl:flex-row gap-x-8">
-                    <div className="flex flex-col items-center xl:items-start text-center mb-4 xl:w-[35vw] xl:mb-0 lg:text-left">
-                        <span className="h2 xl:mt-4 text-accent">My Latest Work.</span>
-                        <p className="max-w-[400px] mx-auto mb-4 lg:mx-0">
+                <div className="flex flex-col justify-center items-center justify-center">
+                    <div className="flex flex-col justify-center items-center text-center mb-4 xl:w-[35vw]">
+                        <span className="h2 capitalize mb-4">My Latest Work</span>
+                        <p className="max-w-[400px] mx-auto mb-4 text-center text-secondary">
                             A collection of recent projects I have worked on. Click on a project to
                             view more details.
                         </p>
-                        <a
-                            href="https://github.com/PatrickLisiecki"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <button
-                                className="bg-none border border-primary px-8 py-2 transition-all duration-300 flex items-center justify-center overflow-hidden group
-                            hover:border-accent"
-                            >
-                                <span className="text-primary group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                                    View all projects
-                                </span>
-                                <FontAwesomeIcon
-                                    icon="fa-solid fa-right-long"
-                                    className="text-primary -translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]"
-                                />
-                            </button>
-                        </a>
                     </div>
-                    <div className="w-full max-w-[75%]">
-                        <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
+                    <div className="w-[75%]">
+                        <div className="grid grid-cols-1 grid-rows-4 gap-4 cursor-pointer lg:grid-cols-2 lg:grid-rows-2">
                             {projectsData.map((item, index) => {
                                 return (
                                     <a
@@ -77,7 +59,7 @@ export default function Projects() {
                                                     alt="Project Image"
                                                     className="group-hover:scale-125 transition-all duration-500"
                                                 />
-                                                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-sky-400 to-blue-500 opacity-0 group-hover:opacity-80 transition-all duration-300"></div>
+                                                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-gray-400 to-gray-500 opacity-0 group-hover:opacity-80 transition-all duration-300"></div>
                                                 <div className="absolute bottom-0 translate-y-full text-[13px] tracking-[0.2em] group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
                                                     <div className="flex items-center gap-x-2">
                                                         <div className="text-white delay-100">

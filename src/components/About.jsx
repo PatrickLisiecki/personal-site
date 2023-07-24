@@ -11,20 +11,23 @@ export default function About() {
                 <div className="flex flex-col justify-between gap-y-10">
                     <div className="w-full flex flex-col justify-evenly items-center gap-x-4 gap-y-4 lg:flex-row">
                         {/* Image */}
-                        <div className="max-w-[400px] max-h-[375px] rounded-full border-3 border-primary overflow-hidden xl:max-w-[450px] xl:max-h-[425px]">
+                        <div className="max-w-[375px] max-h-[350px] overflow-hidden xl:max-w-[450px] xl:max-h-[425px]">
                             <img
-                                className="h-auto max-w-full transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
-                                src="src/assets/pfp.png"
-                                alt="image description"
+                                className="h-auto max-w-full"
+                                src="src/assets/cup.png"
+                                alt="About Picture"
                             />
                         </div>
 
                         {/* Text */}
-                        <div className="max-w-[400px] xl:max-w-[600px] flex flex-col lg:justify-start lg:items-start md:justify-center md:items-center">
+                        <div className="max-w-[400px] xl:max-w-[700px] flex flex-col lg:justify-start lg:items-start md:justify-center md:items-center">
+                            {/* Title */}
                             <span className="h3 uppercase text-center mb-0">About Me</span>
-                            <span className="h3 text-[20px] uppercase text-accent text-center mb-0">
+                            <span className="h3 text-[20px] uppercase text-accent text-center lg:text-left mb-0">
                                 CS Student and Full-Stack Developer in New York
                             </span>
+
+                            {/* Description */}
                             <p className="font-[16px] text-secondary">
                                 Currently, I'm a junior computer science student at the City
                                 University of New York-College of Staten Island and a current

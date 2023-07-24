@@ -1,40 +1,69 @@
 /* eslint-disable react/no-unescaped-entities */
 
-// Icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// Contact Info
+const contactInfo = [
+    {
+        title: "Location",
+        text: "New York, NY",
+        icon: "src/assets/pin.png",
+        alt: "Location Pin",
+    },
+    {
+        title: "Email",
+        text: "impatricklisiecki@gmail.com",
+        icon: "src/assets/at.png",
+        alt: "At",
+    },
+    {
+        title: "WhatsApp",
+        text: "347.604.5676",
+        icon: "src/assets/chat.png",
+        alt: "Chat Bubble",
+    },
+];
 
 export default function Contact() {
     return (
         <div className="section bg-gray-100" id="contact">
-            <div className="container mx-auto text-center xl:text-left flex items-center justify-center">
-                <div className="flex flex-col w-full max-w-[700px]">
+            <div className="container mx-auto text-center flex items-center justify-center">
+                <div className="flex flex-col w-full">
                     {/* Heading */}
+                    <div className="w-full flex justify-center items-center">
+                        <img
+                            src="src/assets/chat-bubble.png"
+                            alt="Chat Bubbles"
+                            className="max-w-[80px] max-h-[80px]"
+                        />
+                    </div>
                     <span className="h2 text-center mb-12">
                         Let's <span className="text-accent">connect.</span>
                     </span>
 
-                    {/* Form */}
-                    <form method="post" className="flex-1 flex flex-col gap-6 w-full mx-auto">
-                        {/* Input */}
-                        <div className="w-full flex gap-x-6">
-                            <input type="text" name="name" placeholder="Name" className="input" />
-                            <input type="text" name="email" placeholder="Email" className="input" />
-                        </div>
-                        <input type="text" placeholder="Subject" className="input" />
-
-                        <textarea placeholder="Message" className="textarea"></textarea>
-
-                        {/* Submit */}
-                        <button className="border border-primary max-w-[180px] px-8 py-2 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group">
-                            <span className="text-primary font-poppins group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                                Let's talk
-                            </span>
-                            <FontAwesomeIcon
-                                icon="fa-solid fa-right-long"
-                                className="text-primary -translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]"
-                            />
-                        </button>
-                    </form>
+                    {/* Contact Info */}
+                    <div className="w-full flex flex-col justify-evenly lg:flex-row">
+                        {contactInfo.map((item, index) => {
+                            return (
+                                <div
+                                    key={index}
+                                    className="min-w-[200px] p-4 rounded-[20px] flex flex-col items-center gap-y-2 gap-x-4 lg:flex-row"
+                                >
+                                    <div className="w-[100px] h-[100px] p-10 flex justify-center items-center rounded-full p-4 bg-white shadow-bs">
+                                        <img
+                                            src={item.icon}
+                                            alt={item.alt}
+                                            className="h-auto max-w-full"
+                                        />
+                                    </div>
+                                    <div className="flex flex-col justify-center items-center gap-y-[4px] lg:gap-y-[0px] lg:justify-start lg:items-start">
+                                        <span className="text-2xl font-semibold">{item.title}</span>
+                                        <span className="text-xl text-secondary cursor-pointer hover:text-accent">
+                                            {item.text}
+                                        </span>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
         </div>

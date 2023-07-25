@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
+
 import Lottie from "lottie-react";
 import animation from "../assets/animation.json";
 
@@ -8,32 +10,34 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Home() {
     return (
         <div className="section min-h-screen bg-gray-100" id="home">
-            <div className="container mx-auto flex flex-col justify-evenly items-center lg:flex-row">
-                <div className="max-w-[800px] flex flex-col justify-center text-center xl:pt-0 xl:text-left">
+            <div className="container mx-auto flex flex-col justify-center items-center lg:flex-row">
+                <div className="min-w-[300px] md:min-w-[500px] flex flex-col justify-center text-center xl:pt-0 xl:text-left">
                     {/* Title */}
-                    <span className="h1 mb-4">
-                        Full-Stack Web Developer{" "}
-                        <img
-                            src="src/assets/flash.png"
-                            alt="Flash"
-                            width={70}
-                            height={70}
-                            className="inline-block"
-                        />
-                    </span>
+                    <div className="leading-[0.8] mb-2">
+                        <span className="h1 mb-0 block leading-none">Patrick Lisiecki</span>
+                        <span className="h2 text-[25px] md:text-[40px]">
+                            Web Developer
+                            <img
+                                src="src/assets/flash.png"
+                                alt="Flash"
+                                className="inline-block mx-1 md:mx-2 max-w-[25px] max-h-[25px] md:max-w-[50px] md:max-h-[50px]"
+                            />
+                        </span>
+                    </div>
 
                     {/* Text */}
                     <p className="max-w-[350px] mx-auto mb-4 text-primary xl:max-w-[475px] xl:mx-0">
-                        Hello! I'm Patrick Lisiecki, a passionate full-stack web developer and CS
-                        student based in New York. 🗽
+                        Hello! I'm Patrick Lisiecki, a passionate web developer and CS student based
+                        in New York. 🗽
                     </p>
 
                     {/* Buttons */}
                     <div className="flex justify-center items-center gap-x-4 mb-4 xl:justify-start">
-                        <a href="#footer">
-                            <button className="bg-accent border border-accent min-w-[120px] max-w-[180px] px-4 py-3 transition-all duration-300 flex items-center justify-center overflow-hidden group">
+                        {/* Contact Button */}
+                        <a href="#contact">
+                            <button className="bg-accent border border-accent min-w-[120px] max-w-[140px] md:max-w-[160px] px-4 py-3 transition-all duration-300 flex items-center justify-center overflow-hidden group">
                                 <span className="text-white group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                                    Say Hello
+                                    Contact
                                 </span>
                                 <FontAwesomeIcon
                                     icon="fa-solid fa-right-long"
@@ -41,12 +45,14 @@ export default function Home() {
                                 />
                             </button>
                         </a>
+
+                        {/* Resume Button */}
                         <a
                             href="https://drive.google.com/file/d/1a0hWESwTMwDCh3WbXm8dnkfI1PZF57WG/view?usp=drive_link"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <button className="bg-none border border-primary min-w-[120px] max-w-[180px] px-4 py-3 transition-all duration-300 flex items-center justify-center overflow-hidden group">
+                            <button className="bg-none border border-primary min-w-[120px] max-w-[140px] md:max-w-[160px] px-4 py-3 transition-all duration-300 flex items-center justify-center overflow-hidden group">
                                 <span className="text-primary group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                                     Resume
                                 </span>
@@ -74,18 +80,14 @@ export default function Home() {
                             rel="noreferrer"
                             className="hover:text-accent transition-all duration-300"
                         >
-                            <FontAwesomeIcon icon="fa-brands fa-github" />
+                            <FontAwesomeIcon icon="fa-brands fa-square-github" />
                         </a>
                     </div>
                 </div>
 
                 {/* Animation / Image */}
-                <div className="max-w-[400px] max-h-[375px] rounded-full border-3 border-primary overflow-hidden xl:max-w-[450px] xl:max-h-[425px]">
-                    <img
-                        className="h-auto max-w-full transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
-                        src="src/assets/pfp.png"
-                        alt="image description"
-                    />
+                <div className="max-w-[400px] max-h-[375px] xl:max-w-[500px] xl:max-h-[475px] overflow-hidden">
+                    <Lottie animationData={animation} />
                 </div>
             </div>
         </div>

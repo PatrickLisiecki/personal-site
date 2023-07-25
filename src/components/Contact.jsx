@@ -32,10 +32,10 @@ export default function Contact() {
                         <img
                             src="src/assets/chat-bubble.png"
                             alt="Chat Bubbles"
-                            className="max-w-[80px] max-h-[80px]"
+                            className="max-w-[75px] max-h-[75px] md:max-w-[125px] md:max-h-[125px]"
                         />
                     </div>
-                    <span className="h2 text-center mb-12">
+                    <span className="h2 text-center mb-6 lg:mb-12">
                         Let's <span className="text-accent">connect.</span>
                     </span>
 

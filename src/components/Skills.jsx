@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 
 // Icons
@@ -8,79 +9,59 @@ import { faFire } from "@fortawesome/free-solid-svg-icons";
 // Skills & Tools
 const frontEndSkills = [
     {
-        title: "HTML",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
-    },
-    {
-        title: "CSS",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
-    },
-    {
         title: "JavaScript",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
+        icon: <i className="devicon-javascript-plain colored text-3xl"></i>,
     },
     {
-        title: "TypeScript",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
+        title: "React.JS",
+        icon: <i className="devicon-react-original colored text-3xl"></i>,
     },
     {
-        title: "React",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
-    },
-    {
-        title: "Tailwind",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
+        title: "TailwindCSS",
+        icon: <i className="devicon-tailwindcss-plain colored text-3xl"></i>,
     },
 ];
 
 const backEndSkills = [
     {
-        title: "Node.js",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
+        title: "Node.JS",
+        icon: <i className="devicon-nodejs-plain colored text-3xl"></i>,
     },
     {
-        title: "Express.js",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
-    },
-    {
-        title: "PostgreSQL",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
-    },
-    {
-        title: "Sequelize",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
+        title: "Express.JS",
+        icon: <i className="devicon-express-original colored text-3xl"></i>,
     },
     {
         title: "MongoDB",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
+        icon: <i className="devicon-mongodb-plain colored text-3xl"></i>,
     },
-    {
-        title: "Mongoose",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
-    },
+    // {
+    //     title: "Mongoose",
+    //     icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
+    // },
 ];
 
 const tools = [
     {
         title: "Git",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
+        icon: <i className="devicon-git-plain colored text-3xl"></i>,
     },
     {
         title: "GitHub",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
+        icon: <i className="devicon-github-original colored text-3xl"></i>,
     },
     {
         title: "VS Code",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
+        icon: <i className="devicon-vscode-plain colored text-3xl"></i>,
     },
-    {
-        title: "Windows",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
-    },
-    {
-        title: "Postman",
-        icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
-    },
+    // {
+    //     title: "Windows",
+    //     icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
+    // },
+    // {
+    //     title: "Postman",
+    //     icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
+    // },
 ];
 
 export default function Skills() {
@@ -88,83 +69,97 @@ export default function Skills() {
         <div className="section bg-gray-100" id="skills">
             <div className="container mx-auto">
                 <div className="w-full flex flex-col justify-center items-center gap-y-4">
+                    {/* Header */}
                     <div className="w-full flex justify-center items-center">
                         <img
                             src="src/assets/tools.png"
                             alt="Tools"
-                            className="max-w-[75px] max-h-[75px]"
+                            className="max-w-[75px] max-h-[75px] md:max-w-[100px] md:max-h-[100px]"
                         />
                     </div>
-                    <span className="h2 text-[22px] mb-4 lg:text-[35px]">
-                        Technologies & Tools I Use
-                    </span>
+                    <span className="h2 capitalize mb-4">Technologies & Tools I Use</span>
+
+                    {/* Front End Skills */}
                     <div className="w-full flex flex-col justify-evenly items-center gap-x-4 gap-y-4 lg:flex-row">
-                        <div className="min-w-[350px] min-h-[450px] rounded-[10px] p-10 bg-gray-300 transition-all duration-300 hover:scale-105 xl:min-w-[350px] lg:min-w-[300px]">
+                        <div className="min-w-[350px] min-h-[400px] rounded-[10px] p-10 bg-gray-300 transition-all duration-300 hover:-translate-y-2 xl:min-w-[350px] lg:min-w-[300px] md:min-h-[450px]">
                             <div className="h-full flex flex-col justify-center items-center">
                                 <div className="w-full flex justify-center items-center">
                                     <img
                                         src="src/assets/bucket.png"
                                         alt="Paint Bucket"
-                                        className="max-w-[100px] max-h-[100px]"
+                                        className="max-w-[75px] max-h-[75px] md:max-w-[100px] md:max-h-[100px]"
                                     />
                                 </div>
-                                <span className="h3 mb-4">Front-End Skills</span>
-                                <ul className="w-full ml-[50%] flex flex-col items-start">
+                                <span className="h3 mb-4">Front-End</span>
+                                <ul className="w-full flex flex-col justify-center items-start gap-y-2">
                                     {frontEndSkills.map((skill, index) => {
                                         return (
-                                            <li key={index}>
-                                                <span className="text-xl">
+                                            <li
+                                                key={index}
+                                                className="ml-[20%] flex flex-row justify-start items-center gap-x-2"
+                                            >
+                                                <div className="w-[50px] h-[50px] p-4 flex justify-center items-center bg-white rounded-full shadow-bs">
                                                     {skill.icon}
-                                                    {skill.title}
-                                                </span>
+                                                </div>
+                                                <span className="text-xl">{skill.title}</span>
                                             </li>
                                         );
                                     })}
                                 </ul>
                             </div>
                         </div>
-                        <div className="min-w-[350px] min-h-[450px] rounded-[10px] p-10 bg-gray-300 transition-all duration-300 hover:scale-105 xl:min-w-[350px] lg:min-w-[300px]">
+
+                        {/* Back End Skills */}
+                        <div className="min-w-[350px] min-h-[400px] rounded-[10px] p-10 bg-gray-300 transition-all duration-300 hover:-translate-y-2 xl:min-w-[350px] lg:min-w-[300px] md:min-h-[450px]">
                             <div className="h-full flex flex-col justify-center items-center">
                                 <div className="w-full flex justify-center items-center">
                                     <img
                                         src="src/assets/safe.png"
                                         alt="Safe"
-                                        className="max-w-[100px] max-h-[100px]"
+                                        className="max-w-[75px] max-h-[75px] md:max-w-[100px] md:max-h-[100px]"
                                     />
                                 </div>
-                                <span className="h3 mb-4">Back-End Skills</span>
-                                <ul className="w-full ml-[50%] flex flex-col items-start">
+                                <span className="h3 mb-4">Back-End</span>
+                                <ul className="w-full flex flex-col justify-center items-start gap-y-2">
                                     {backEndSkills.map((skill, index) => {
                                         return (
-                                            <li key={index}>
-                                                <span className="text-xl">
+                                            <li
+                                                key={index}
+                                                className="ml-[20%] flex flex-row justify-start items-center gap-x-2"
+                                            >
+                                                <div className="w-[50px] h-[50px] p-4 flex justify-center items-center bg-white rounded-full shadow-bs">
                                                     {skill.icon}
-                                                    {skill.title}
-                                                </span>
+                                                </div>
+                                                <span className="text-xl">{skill.title}</span>
                                             </li>
                                         );
                                     })}
                                 </ul>
                             </div>
                         </div>
-                        <div className="min-w-[350px] min-h-[450px] rounded-[10px] p-10 bg-gray-300 transition-all duration-300 hover:scale-105 xl:min-w-[350px] lg:min-w-[300px]">
+
+                        {/* Tools */}
+                        <div className="min-w-[350px] min-h-[400px] rounded-[10px] p-10 bg-gray-300 transition-all duration-300 hover:-translate-y-2 xl:min-w-[350px] lg:min-w-[300px] md:min-h-[450px]">
                             <div className="h-full flex flex-col justify-center items-center">
                                 <div className="w-full flex justify-center items-center">
                                     <img
                                         src="src/assets/setting.png"
-                                        alt="Setting Wheel"
-                                        className="max-w-[100px] max-h-[100px]"
+                                        alt="Settings Wheel"
+                                        className="max-w-[75px] max-h-[75px] md:max-w-[100px] md:max-h-[100px]"
                                     />
                                 </div>
                                 <span className="h3 mb-4">Tools</span>
-                                <ul className="w-full ml-[50%] flex flex-col items-start">
+                                <ul className="w-full flex flex-col justify-center items-start gap-y-2">
                                     {tools.map((skill, index) => {
                                         return (
-                                            <li key={index}>
-                                                <span className="text-xl">
+                                            <li
+                                                key={index}
+                                                className="ml-[20%] flex flex-row justify-start items-center gap-x-2"
+                                            >
+                                                <div className="w-[50px] h-[50px] p-4 flex justify-center items-center bg-white rounded-full shadow-bs">
                                                     {skill.icon}
-                                                    {skill.title}
-                                                </span>
+                                                </div>
+                                                <span className="text-xl">{skill.title}</span>
                                             </li>
                                         );
                                     })}

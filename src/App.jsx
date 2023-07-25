@@ -9,11 +9,11 @@ import Skills from "./components/Skills";
 // Global Icons
 import { library } from "@fortawesome/fontawesome-svg-core";
 
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import { faXmark, faRightLong } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faGithub, faLinkedin, faXmark, faRightLong);
+library.add(faSquareGithub, faLinkedin, faXmark, faRightLong);
 
 function App() {
     return (

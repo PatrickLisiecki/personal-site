@@ -1,6 +1,8 @@
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { faMedium } from "@fortawesome/free-brands-svg-icons";
+
 export default function Footer() {
     return (
         <footer className="text-white flex items-center p-4 lg:p-8 bg-gray-800" id="footer">
@@ -22,7 +24,15 @@ export default function Footer() {
                             rel="noreferrer"
                             className="hover:text-accent transition-all duration-300"
                         >
-                            <FontAwesomeIcon icon="fa-brands fa-github" />
+                            <FontAwesomeIcon icon="fa-brands fa-square-github" />
+                        </a>
+                        <a
+                            href="https://medium.com/@patricklisiecki"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-accent transition-all duration-300"
+                        >
+                            <FontAwesomeIcon icon={faMedium} />
                         </a>
                     </div>
                 </div>

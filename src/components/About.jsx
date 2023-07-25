@@ -13,9 +13,9 @@ export default function About() {
                         {/* Image */}
                         <div className="max-w-[375px] max-h-[350px] overflow-hidden xl:max-w-[450px] xl:max-h-[425px]">
                             <img
-                                className="h-auto max-w-full"
                                 src="src/assets/cup.png"
                                 alt="About Picture"
+                                className="h-auto max-w-full"
                             />
                         </div>
 
@@ -24,22 +24,22 @@ export default function About() {
                             {/* Title */}
                             <span className="h3 uppercase text-center mb-0">About Me</span>
                             <span className="h3 text-[20px] uppercase text-accent text-center lg:text-left mb-0">
-                                CS Student and Full-Stack Developer in New York
+                                CS Student and Developer Based in New York
                             </span>
 
                             {/* Description */}
                             <p className="font-[16px] text-secondary">
-                                Currently, I'm a junior computer science student at the City
-                                University of New York-College of Staten Island and a current
-                                resident of the NYC Tech Talent Pipeline Bootcamp. When I'm not
-                                diving into lines of code, you can find me at the gym, where I push
-                                myself to reach new heights both physically and mentally. In my
-                                downtime, I enjoy watching captivating thriller movies that keep me
-                                on the edge of my seat. Moreover, I find enjoyment in assembling and
-                                fixing computers, treating each system like a puzzle to be mastered.
-                                Through this platform, I aim to share my experiences, projects, and
-                                insights, as well as connect with like-minded individuals who share
-                                my passion for all things tech and beyond.
+                                Hello! My name is Patrick and I'm a computer science student at the
+                                CUNY-College of Staten Island and a current resident of the NYC Tech
+                                Talent Pipeline Bootcamp. When I'm not diving into lines of code,
+                                you can find me at the gym, where I push myself to reach new heights
+                                both physically and mentally. In my downtime, I enjoy watching
+                                movies and shows. At this moment, my favorite movie is Parasite and
+                                my favorite show is Breaking Bad. Moreover, I find enjoyment in
+                                assembling and fixing computers, which is the reason why I began my
+                                coding journey. Through this platform, I aim to share my
+                                experiences, projects, and insights, as well as connect with others
+                                who share my passion for all things tech and beyond.
                             </p>
                         </div>
                     </div>

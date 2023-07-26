@@ -13,7 +13,7 @@ export default function About() {
                         {/* Image */}
                         <div className="max-w-[375px] max-h-[350px] overflow-hidden xl:max-w-[450px] xl:max-h-[425px]">
                             <img
-                                src="../../src/assets/cup.png"
+                                src="../assets/cup.png"
                                 alt="About Picture"
                                 className="h-auto max-w-full"
                             />

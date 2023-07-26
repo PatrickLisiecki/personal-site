@@ -10,7 +10,7 @@ const projectsData = [
         description:
             "A functional dynamic forum that gives users the option to create, edit, and delete forums, as well as a thread creation feature.",
         link: "https://github.com/PatrickLisiecki/book-review-forum",
-        image: "../../src/assets/project-1.png",
+        image: "../assets/project-1.png",
         demo: "#",
         tech: [
             <i className="devicon-html5-plain colored"></i>,
@@ -24,7 +24,7 @@ const projectsData = [
             "A user-friendly and interactive application for effective learning with digital flashcards.",
         link: "https://github.com/PatrickLisiecki/flashcard-creator",
         demo: "#",
-        image: "../../src/assets/project-2.png",
+        image: "../assets/project-2.png",
         tech: [
             <i className="devicon-mongodb-plain colored"></i>,
             <i className="devicon-express-original colored"></i>,
@@ -37,7 +37,7 @@ const projectsData = [
         description: "An interactive portfolio website for a developer.",
         link: "https://github.com/PatrickLisiecki/portfolio",
         demo: "https://portfolio-patricklisiecki.vercel.app/",
-        image: "../../src/assets/project-3.png",
+        image: "../assets/project-3.png",
         tech: [
             <i className="devicon-nextjs-original colored"></i>,
             <i className="devicon-react-original colored"></i>,
@@ -54,7 +54,7 @@ export default function Projects() {
                     <div className="flex flex-col justify-center items-center text-center mb-4 xl:w-[35vw]">
                         <div className="w-full flex justify-center items-center">
                             <img
-                                src="../../src/assets/computer.png"
+                                src="../assets/computer.png"
                                 alt="Computer"
                                 className="max-w-[75px] max-h-[75px] md:max-w-[100px] md:max-h-[100px]"
                             />

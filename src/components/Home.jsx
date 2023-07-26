@@ -18,7 +18,7 @@ export default function Home() {
                         <span className="h2 text-[25px] md:text-[40px]">
                             Web Developer
                             <img
-                                src="../../src/assets/flash.png"
+                                src="../assets/flash.png"
                                 alt="Flash"
                                 className="inline-block mx-1 md:mx-2 max-w-[25px] max-h-[25px] md:max-w-[50px] md:max-h-[50px]"
                             />

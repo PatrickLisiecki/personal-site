@@ -4,8 +4,6 @@
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faFire } from "@fortawesome/free-solid-svg-icons";
-
 // Skills & Tools
 const frontEndSkills = [
     {
@@ -68,25 +66,27 @@ export default function Skills() {
     return (
         <div className="section bg-gray-100" id="skills">
             <div className="container mx-auto">
-                <div className="w-full flex flex-col justify-center items-center gap-y-4">
+                <div className="w-full flex flex-col justify-center items-center">
                     {/* Header */}
-                    <div className="w-full flex justify-center items-center">
-                        <img
-                            src="src/assets/tools.png"
-                            alt="Tools"
-                            className="max-w-[75px] max-h-[75px] md:max-w-[100px] md:max-h-[100px]"
-                        />
+                    <div className="flex flex-col justify-center items-center text-center mb-4 xl:w-[35vw]">
+                        <div className="w-full flex justify-center items-center">
+                            <img
+                                src="src/assets/tools.png"
+                                alt="Tools"
+                                className="max-w-[75px] max-h-[75px] md:max-w-[100px] md:max-h-[100px]"
+                            />
+                        </div>
+                        <span className="h2 capitalize mb-4">My Tech Stack</span>
                     </div>
-                    <span className="h2 capitalize mb-4">Technologies & Tools I Use</span>
 
-                    {/* Front End Skills */}
+                    {/* Front-End Skills */}
                     <div className="w-full flex flex-col justify-evenly items-center gap-x-4 gap-y-4 lg:flex-row">
                         <div className="min-w-[350px] min-h-[400px] rounded-[10px] p-10 bg-gray-300 transition-all duration-300 hover:-translate-y-2 xl:min-w-[350px] lg:min-w-[300px] md:min-h-[450px]">
                             <div className="h-full flex flex-col justify-center items-center">
                                 <div className="w-full flex justify-center items-center">
                                     <img
                                         src="src/assets/bucket.png"
-                                        alt="Paint Bucket"
+                                        alt="Front-End"
                                         className="max-w-[75px] max-h-[75px] md:max-w-[100px] md:max-h-[100px]"
                                     />
                                 </div>
@@ -109,13 +109,13 @@ export default function Skills() {
                             </div>
                         </div>
 
-                        {/* Back End Skills */}
+                        {/* Back-End Skills */}
                         <div className="min-w-[350px] min-h-[400px] rounded-[10px] p-10 bg-gray-300 transition-all duration-300 hover:-translate-y-2 xl:min-w-[350px] lg:min-w-[300px] md:min-h-[450px]">
                             <div className="h-full flex flex-col justify-center items-center">
                                 <div className="w-full flex justify-center items-center">
                                     <img
                                         src="src/assets/safe.png"
-                                        alt="Safe"
+                                        alt="Back-End"
                                         className="max-w-[75px] max-h-[75px] md:max-w-[100px] md:max-h-[100px]"
                                     />
                                 </div>
@@ -144,7 +144,7 @@ export default function Skills() {
                                 <div className="w-full flex justify-center items-center">
                                     <img
                                         src="src/assets/setting.png"
-                                        alt="Settings Wheel"
+                                        alt="Tools"
                                         className="max-w-[75px] max-h-[75px] md:max-w-[100px] md:max-h-[100px]"
                                     />
                                 </div>

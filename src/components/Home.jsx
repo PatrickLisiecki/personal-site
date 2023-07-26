@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import Lottie from "lottie-react";
-import animation from "../animation/animation.json";
+import animation from "../assets/animation.json";
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

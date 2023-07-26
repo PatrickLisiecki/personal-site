@@ -11,15 +11,19 @@ export default function About() {
                 <div className="flex flex-col justify-between gap-y-10">
                     <div className="w-full flex flex-col justify-evenly items-center gap-x-4 gap-y-4 lg:flex-row">
                         {/* Image */}
-                        <div className="max-w-[375px] max-h-[350px] overflow-hidden xl:max-w-[450px] xl:max-h-[425px]">
-                            <img src="/cup.png" alt="About Picture" className="h-auto max-w-full" />
+                        <div className="max-w-[300px] max-h-[300px] overflow-hidden xl:max-w-[450px] xl:max-h-[425px] lg:max-w-[350px] lg:max-h-[325px]">
+                            <img
+                                src="/camera.png"
+                                alt="About Picture"
+                                className="h-auto max-w-full"
+                            />
                         </div>
 
                         {/* Text */}
                         <div className="max-w-[400px] xl:max-w-[700px] flex flex-col lg:justify-start lg:items-start md:justify-center md:items-center">
                             {/* Title */}
                             <span className="h3 uppercase text-center mb-0">About Me</span>
-                            <span className="h3 text-[20px] uppercase text-accent text-center lg:text-left mb-0">
+                            <span className="h3 text-[20px] uppercase text-accent text-center leading-tight lg:text-left mb-2 lg:mb-0 py-0 lg:py-2">
                                 CS Student and Developer Based in New York
                             </span>
 

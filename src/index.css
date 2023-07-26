@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-} */
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -69,22 +53,6 @@
     }
     .btn-lg {
         @apply h-[56px] px-10 text-base;
-    }
-    .btn-link {
-        @apply text-base;
-    }
-    .input {
-        @apply h-[52px];
-    }
-    .input {
-        @apply w-full h-[52px] rounded-lg pl-6 capitalize;
-    }
-    .input,
-    .textarea {
-        @apply bg-transparent outline-none focus:border-accent border border-secondary placeholder:text-secondary placeholder:font-light;
-    }
-    .textarea {
-        @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
     }
     .section {
         @apply py-28 lg:py-24 lg:h-screen flex items-center;

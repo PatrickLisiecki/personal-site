@@ -71,7 +71,7 @@ export default function Skills() {
                     <div className="flex flex-col justify-center items-center text-center mb-4 xl:w-[35vw]">
                         <div className="w-full flex justify-center items-center">
                             <img
-                                src="src/assets/tools.png"
+                                src="../../src/assets/tools.png"
                                 alt="Tools"
                                 className="max-w-[75px] max-h-[75px] md:max-w-[100px] md:max-h-[100px]"
                             />
@@ -85,7 +85,7 @@ export default function Skills() {
                             <div className="h-full flex flex-col justify-center items-center">
                                 <div className="w-full flex justify-center items-center">
                                     <img
-                                        src="src/assets/bucket.png"
+                                        src="../../src/assets/bucket.png"
                                         alt="Front-End"
                                         className="max-w-[75px] max-h-[75px] md:max-w-[100px] md:max-h-[100px]"
                                     />
@@ -114,7 +114,7 @@ export default function Skills() {
                             <div className="h-full flex flex-col justify-center items-center">
                                 <div className="w-full flex justify-center items-center">
                                     <img
-                                        src="src/assets/safe.png"
+                                        src="../../src/assets/safe.png"
                                         alt="Back-End"
                                         className="max-w-[75px] max-h-[75px] md:max-w-[100px] md:max-h-[100px]"
                                     />
@@ -143,7 +143,7 @@ export default function Skills() {
                             <div className="h-full flex flex-col justify-center items-center">
                                 <div className="w-full flex justify-center items-center">
                                     <img
-                                        src="src/assets/setting.png"
+                                        src="../../src/assets/setting.png"
                                         alt="Tools"
                                         className="max-w-[75px] max-h-[75px] md:max-w-[100px] md:max-h-[100px]"
                                     />

@@ -5,6 +5,8 @@ import { useState } from "react";
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
+
 // Nav links
 const navData = [
     {
@@ -40,7 +42,7 @@ export default function Navbar() {
         <nav className="w-full fixed z-[999] bg-white shadow-bs p-8">
             <div className="container mx-auto flex flex-row justify-between items-center">
                 {/* Name / Logo */}
-                <a href="#home" className="text-2xl md:text-3xl">
+                <a href="#home" className="text-[28px] md:text-3xl">
                     <span className="font-[500]">PATRICK</span>{" "}
                     <span className="font-[500]">LISIECKI</span>
                     <span className="text-accent">.</span>
@@ -66,29 +68,21 @@ export default function Navbar() {
 
                 {/* Mobile menu button */}
                 <div className="lg:hidden">
-                    <button onClick={toggleMenu} className="text-primary">
+                    <button onClick={toggleMenu} className="flex justify-center items-center">
+                        {/* <FontAwesomeIcon icon={faBarsStaggered} className="w-6 h-6" /> */}
                         <svg
-                            className="w-6 h-6"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg"
+                            className="w-7 h-7 hover:text-accent transition-all duration-300"
                         >
-                            {isOpen ? (
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M4 6h16M4 12h16m-7 6h7"
-                                />
-                            ) : (
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M4 6h16M4 12h16m-7 6h7"
-                                />
-                            )}
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M4 6h16M4 12h16m-7 6h7"
+                            />
                         </svg>
                     </button>
                 </div>
@@ -98,25 +92,30 @@ export default function Navbar() {
             <div
                 className={`${
                     isOpen ? "block" : "hidden"
-                } lg:hidden w-full h-screen fixed top-0 left-0 z-[999] flex justify-center items-center bg-white transition-all duration-300 ease-in-out`}
+                } lg:hidden w-full h-screen fixed top-0 left-0 z-[999] flex justify-center items-center bg-white`}
             >
                 <button
                     onClick={toggleMenu}
-                    className="text-4xl text-primary hover:text-accent transition-all duration-300"
+                    className="text-primary hover:text-accent transition-all duration-300"
                 >
                     <FontAwesomeIcon
                         icon="fa-solid fa-xmark"
-                        className="absolute top-[2rem] right-[4rem] cursor-pointer z-[100]"
+                        className="w-8 h-8 absolute top-[2rem] right-[4rem] cursor-pointer z-[100]"
                     />
                 </button>
 
-                <ul className="flex flex-col gap-y-8">
+                {/* Links for mobile menu */}
+                <ul className="min-w-[150px] flex flex-col gap-y-8">
                     {navData.map((item, index) => {
                         return (
-                            <li key={index} onClick={toggleMenu} className="text-center">
+                            <li
+                                key={index}
+                                onClick={toggleMenu}
+                                className="flex justify-center items-center"
+                            >
                                 <a
                                     href={item.link}
-                                    className="text-2xl hover:text-accent transition-all duration-300"
+                                    className="text-2xl font-semibold hover:text-accent transition-all duration-300"
                                 >
                                     {item.title}
                                 </a>

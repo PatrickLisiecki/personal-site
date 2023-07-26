@@ -1,7 +1,7 @@
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faMedium } from "@fortawesome/free-brands-svg-icons";
+import { faDev } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
     return (
@@ -27,12 +27,12 @@ export default function Footer() {
                             <FontAwesomeIcon icon="fa-brands fa-square-github" />
                         </a>
                         <a
-                            href="https://medium.com/@patricklisiecki"
+                            href="https://dev.to/patricklisiecki"
                             target="_blank"
                             rel="noreferrer"
                             className="hover:text-accent transition-all duration-300"
                         >
-                            <FontAwesomeIcon icon={faMedium} />
+                            <FontAwesomeIcon icon={faDev} />
                         </a>
                     </div>
                 </div>

@@ -6,21 +6,21 @@ const contactInfo = [
         title: "Location",
         text: "New York, NY",
         link: "",
-        icon: "../assets/pin.png",
+        icon: "/pin.png",
         alt: "Location",
     },
     {
         title: "Email",
         text: "impatricklisiecki@gmail.com",
         link: "mailto:impatricklisiecki@gmail.com",
-        icon: "../assets/at.png",
+        icon: "/at.png",
         alt: "Email",
     },
     {
         title: "LinkedIn",
         text: "linkedin.com/in/patricklisiecki",
         link: "https://www.linkedin.com/in/patricklisiecki/",
-        icon: "../assets/chat.png",
+        icon: "/chat.png",
         alt: "Chat Bubble",
     },
 ];
@@ -33,7 +33,7 @@ export default function Contact() {
                     {/* Heading */}
                     <div className="w-full flex justify-center items-center">
                         <img
-                            src="../assets/chat-bubble.png"
+                            src="/chat-bubble.png"
                             alt="Chat Bubbles"
                             className="max-w-[75px] max-h-[75px] md:max-w-[125px] md:max-h-[125px]"
                         />

@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import Lottie from "lottie-react";
-import animation from "../assets/animation.json";
+import animation from "/animation.json";
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,7 +18,7 @@ export default function Home() {
                         <span className="h2 text-[25px] md:text-[40px]">
                             Web Developer
                             <img
-                                src="../assets/flash.png"
+                                src="/flash.png"
                                 alt="Flash"
                                 className="inline-block mx-1 md:mx-2 max-w-[25px] max-h-[25px] md:max-w-[50px] md:max-h-[50px]"
                             />

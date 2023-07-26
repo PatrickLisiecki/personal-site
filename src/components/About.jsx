@@ -12,11 +12,7 @@ export default function About() {
                     <div className="w-full flex flex-col justify-evenly items-center gap-x-4 gap-y-4 lg:flex-row">
                         {/* Image */}
                         <div className="max-w-[375px] max-h-[350px] overflow-hidden xl:max-w-[450px] xl:max-h-[425px]">
-                            <img
-                                src="../assets/cup.png"
-                                alt="About Picture"
-                                className="h-auto max-w-full"
-                            />
+                            <img src="/cup.png" alt="About Picture" className="h-auto max-w-full" />
                         </div>
 
                         {/* Text */}

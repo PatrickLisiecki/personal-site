@@ -29,11 +29,11 @@ export default function Contact() {
     return (
         <div className="section bg-gray-100" id="contact">
             <div className="container mx-auto text-center flex items-center justify-center">
-                <div className="flex flex-col w-full">
+                <div className=" w-full flex flex-col">
                     {/* Heading */}
                     <div className="w-full flex justify-center items-center">
                         <img
-                            src="/chat-bubble.png"
+                            src="/chat-bubbles.png"
                             alt="Chat Bubbles"
                             className="max-w-[75px] max-h-[75px] md:max-w-[125px] md:max-h-[125px]"
                         />
@@ -48,9 +48,9 @@ export default function Contact() {
                             return (
                                 <div
                                     key={index}
-                                    className="min-w-[200px] p-4 rounded-[20px] flex flex-col items-center gap-y-2 gap-x-4 xl:flex-row"
+                                    className="min-w-[200px] p-4 flex flex-col items-center gap-y-2 gap-x-4 xl:flex-row"
                                 >
-                                    <div className="w-[100px] h-[100px] p-10 flex justify-center items-center rounded-full p-4 bg-white shadow-bs">
+                                    <div className="w-[100px] h-[100px] p-4 flex justify-center items-center rounded-full bg-white shadow-bs">
                                         <img
                                             src={item.icon}
                                             alt={item.alt}

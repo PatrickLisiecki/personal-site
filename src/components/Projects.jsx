@@ -50,7 +50,7 @@ export default function Projects() {
     return (
         <div className="py-[115px] lg:min-h-screen flex items-center" id="projects">
             <div className="container mx-auto">
-                <div className="flex flex-col justify-center items-center justify-center">
+                <div className="flex flex-col justify-center items-center">
                     <div className="flex flex-col justify-center items-center text-center mb-4 xl:w-[35vw]">
                         <div className="w-full flex justify-center items-center">
                             <img
@@ -71,11 +71,11 @@ export default function Projects() {
                                     className="w-full min-h-[300px] md:min-h-[350px] p-5 flex flex-col lg:flex-row lg:justify-center lg:items-center gap-x-8 shadow-bs rounded-[2rem]"
                                 >
                                     {/* Project Image */}
-                                    <div className="min-w-[100%] h-full flex justify-center items-center rounded-lg overflow-hidden shadow-bs mb-2 xl:mb-0 lg:min-w-[60%]">
+                                    <div className="min-w-[90%] h-full flex justify-center items-center rounded-lg overflow-hidden shadow-bs mb-2 xl:mb-0 lg:min-w-[60%]">
                                         <img
                                             src={item.image}
                                             alt="Project Image"
-                                            className="h-full max-w-full object-fit rounded-lg hover:scale-125 transition-all duration-500"
+                                            className="h-full w-full object-fit rounded-lg hover:scale-125 transition-all duration-500"
                                         />
                                     </div>
 

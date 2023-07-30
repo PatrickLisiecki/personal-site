@@ -48,7 +48,7 @@ export default function Home() {
 
                         {/* Resume Button */}
                         <a
-                            href="https://drive.google.com/file/d/1a0hWESwTMwDCh3WbXm8dnkfI1PZF57WG/view?usp=drive_link"
+                            href="https://drive.google.com/file/d/18HfoIYtUPc9nhOxsYO9AgdVYH5BKXtEC/view?usp=sharing"
                             target="_blank"
                             rel="noreferrer"
                         >

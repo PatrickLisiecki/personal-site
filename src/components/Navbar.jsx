@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -37,15 +38,22 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed z-[999] w-full bg-white p-8 shadow-bs">
+    <header className="fixed z-[999] w-full bg-white p-4 shadow-bs sm:p-8">
       <div className="container mx-auto flex flex-row items-center justify-between">
         {/* Name */}
-        <a href="#home">
-          <span className="text-[28px] uppercase md:text-3xl">
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          spy={true}
+          offset={0}
+          className="cursor-pointer"
+        >
+          <span className="text-[24px] uppercase md:text-3xl">
             PATRICK LISIECKI
           </span>
           <span className="text-3xl text-accent">.</span>
-        </a>
+        </Link>
 
         {/* Nav links */}
         <nav className="hidden lg:block">
@@ -53,12 +61,18 @@ export default function Navbar() {
             {navData.map((item, index) => {
               return (
                 <li key={index}>
-                  <a
-                    href={item.link}
-                    className="mx-4 transition-all duration-300 hover:text-accent"
+                  <Link
+                    to={item.link.substring(1)}
+                    smooth={true}
+                    duration={300}
+                    spy={true}
+                    offset={0}
+                    className="mx-4 cursor-pointer"
                   >
-                    {item.title}
-                  </a>
+                    <span className="font-medium transition-all duration-300 hover:text-accent">
+                      {item.title}
+                    </span>
+                  </Link>
                 </li>
               );
             })}
@@ -76,7 +90,7 @@ export default function Navbar() {
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
-              className="h-7 w-7 transition-all duration-300 hover:text-accent"
+              className="h-6 w-6 transition-all duration-300 hover:text-accent"
             >
               <path
                 strokeLinecap="round"
@@ -111,11 +125,10 @@ export default function Navbar() {
                 onClick={toggleMenu}
                 className="flex items-center justify-center"
               >
-                <a
-                  href={item.link}
-                  className="text-2xl font-semibold transition-all duration-300 hover:text-accent"
-                >
-                  {item.title}
+                <a href={item.link}>
+                  <span className="text-2xl font-semibold transition-all duration-300 hover:text-accent">
+                    {item.title}
+                  </span>
                 </a>
               </li>
             );

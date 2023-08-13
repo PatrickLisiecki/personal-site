@@ -4,6 +4,8 @@
 import Lottie from "lottie-react";
 import animation from "../assets/animation.json";
 
+import { Link } from "react-scroll";
+
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -14,13 +16,15 @@ export default function Home() {
         <div className="flex min-w-[300px] flex-col justify-center text-center md:min-w-[500px] xl:pt-0 xl:text-left">
           {/* Title */}
           <div className="mb-2 leading-[0.8]">
-            <h1 className="h1 mb-0 block leading-none">Patrick Lisiecki</h1>
-            <h2 className="h2 mb-0 text-[25px] md:text-[40px]">
+            <h1 className="h1 mb-0 block font-semibold leading-none">
+              Patrick Lisiecki
+            </h1>
+            <h2 className="h2 mb-0 text-[25px] font-semibold md:text-[40px]">
               Web Developer
               <img
                 src="/flash.png"
                 alt="Flash"
-                className="mx-1 inline-block max-h-[25px] max-w-[25px] md:mx-2 md:max-h-[50px] md:max-w-[50px]"
+                className="mx-1 inline-block max-h-[25px] max-w-[25px] md:mx-2 md:max-h-[45px] md:max-w-[45px]"
               />
             </h2>
           </div>
@@ -34,7 +38,13 @@ export default function Home() {
           {/* Buttons */}
           <div className="mb-4 flex items-center justify-center gap-x-4 xl:justify-start">
             {/* Contact Button */}
-            <a href="#contact">
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={0}
+            >
               <button className="group flex min-w-[120px] max-w-[140px] items-center justify-center overflow-hidden border border-accent bg-accent px-4 py-3 transition-all duration-300 md:max-w-[160px]">
                 <span className="text-white transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0">
                   Contact
@@ -44,7 +54,7 @@ export default function Home() {
                   className="absolute -translate-y-[120%] text-[22px] text-white opacity-0 transition-all duration-300 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100"
                 />
               </button>
-            </a>
+            </Link>
 
             {/* Resume Button */}
             <a

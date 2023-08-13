@@ -9,9 +9,9 @@ const projectsData = [
     title: "Flex Fusion",
     description:
       "Flex Fusion is a fitness application designed to provide users with a comprehensive and personalized fitness experience.",
-    link: "https://github.com/PatrickLisiecki/book-review-forum",
+    link: "https://github.com/PatrickLisiecki/flex-fusion",
     image: "/flex.png",
-    demo: "#",
+    demo: "",
     tech: [
       <i className="devicon-react-original colored"></i>,
       <i className="devicon-tailwindcss-plain colored"></i>,
@@ -26,7 +26,7 @@ const projectsData = [
       "A functional dynamic forum that gives users the option to create, edit, and delete forums, as well as a thread creation feature.",
     link: "https://github.com/PatrickLisiecki/book-review-forum",
     image: "/novel.png",
-    demo: "#",
+    demo: "",
     tech: [
       <i className="devicon-html5-plain colored"></i>,
       <i className="devicon-react-original colored"></i>,
@@ -38,7 +38,7 @@ const projectsData = [
     description:
       "A user-friendly and interactive application for effective learning with digital flashcards.",
     link: "https://github.com/PatrickLisiecki/flashcard-creator",
-    demo: "#",
+    demo: "",
     image: "/flashcard.png",
     tech: [
       <i className="devicon-mongodb-plain colored"></i>,
@@ -123,6 +123,7 @@ export default function Projects() {
 
                     {/* Project Links */}
                     <div className="flex w-full items-center justify-center gap-x-8">
+                      {/* GitHub link */}
                       <a href={item.link} target="_blank" rel="noreferrer">
                         <button className="group flex min-w-[120px] max-w-[140px] items-center justify-center overflow-hidden border border-accent bg-accent px-4 py-3 transition-all duration-300 md:max-w-[160px]">
                           <span className="text-white transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0">
@@ -134,8 +135,17 @@ export default function Projects() {
                           />
                         </button>
                       </a>
-                      <a href={item.demo} target="_blank" rel="noreferrer">
-                        <button className="group flex min-w-[120px] max-w-[140px] items-center justify-center overflow-hidden border border-primary bg-none px-4 py-3 transition-all duration-300 md:max-w-[160px]">
+
+                      {/* Demo link */}
+                      <a
+                        href={item.demo !== "" ? item.demo : undefined}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <button
+                          disabled={item.demo === ""}
+                          className="group flex min-w-[120px] max-w-[140px] items-center justify-center overflow-hidden border border-primary bg-none px-4 py-3 transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-50 md:max-w-[160px]"
+                        >
                           <span className="text-primary transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0">
                             Demo
                           </span>

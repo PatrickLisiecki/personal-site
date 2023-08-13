@@ -116,17 +116,21 @@ export default function Projects() {
                           />
                         </button>
                       </a>
-                      <a href={item.demo} target="_blank" rel="noreferrer">
+                      {item.demo ? (
                         <button className="group flex min-w-[120px] max-w-[140px] items-center justify-center overflow-hidden border border-primary bg-none px-4 py-3 transition-all duration-300 md:max-w-[160px]">
-                          <span className="text-primary transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0">
-                            Demo
-                          </span>
-                          <FontAwesomeIcon
-                            icon="fa-solid fa-right-long"
-                            className="absolute -translate-y-[120%] text-[22px] text-primary opacity-0 transition-all duration-300 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100"
-                          />
+                          <a href={item.demo} target="_blank" rel="noreferrer">
+                            <span className="text-primary transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0">
+                              Demo
+                            </span>
+                            <FontAwesomeIcon
+                              icon="fa-solid fa-right-long"
+                              className="absolute -translate-y-[120%] text-[22px] text-primary opacity-0 transition-all duration-300 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100"
+                            />
+                          </a>
                         </button>
-                      </a>
+                      ) : (
+                        <></>
+                      )}
                     </div>
                   </div>
                 </div>

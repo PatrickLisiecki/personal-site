@@ -9,20 +9,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
   return (
-    <div className="section min-h-screen bg-gray-100" id="home">
+    <section className="section min-h-screen bg-gray-100" id="home">
       <div className="container mx-auto flex flex-col items-center justify-center lg:flex-row">
         <div className="flex min-w-[300px] flex-col justify-center text-center md:min-w-[500px] xl:pt-0 xl:text-left">
           {/* Title */}
           <div className="mb-2 leading-[0.8]">
-            <span className="h1 mb-0 block leading-none">Patrick Lisiecki</span>
-            <span className="h2 text-[25px] md:text-[40px]">
+            <h1 className="h1 mb-0 block leading-none">Patrick Lisiecki</h1>
+            <h2 className="h2 mb-0 text-[25px] md:text-[40px]">
               Web Developer
               <img
                 src="/flash.png"
                 alt="Flash"
                 className="mx-1 inline-block max-h-[25px] max-w-[25px] md:mx-2 md:max-h-[50px] md:max-w-[50px]"
               />
-            </span>
+            </h2>
           </div>
 
           {/* Text */}
@@ -90,6 +90,6 @@ export default function Home() {
           <Lottie animationData={animation} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

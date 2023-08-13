@@ -16,17 +16,17 @@ import { faXmark, faRightLong } from "@fortawesome/free-solid-svg-icons";
 library.add(faSquareGithub, faLinkedin, faXmark, faRightLong);
 
 function App() {
-    return (
-        <main className="page relative">
-            <Navbar />
-            <Home />
-            <About />
-            <Skills />
-            <Projects />
-            <Contact />
-            <Footer />
-        </main>
-    );
+  return (
+    <main className="page relative">
+      <Navbar />
+      <Home />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+    </main>
+  );
 }
 
 export default App;

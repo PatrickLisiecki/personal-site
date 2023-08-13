@@ -92,8 +92,8 @@ export default function Navbar() {
       {/* Mobile menu */}
       <nav
         className={`${
-          isOpen ? "block" : "hidden"
-        } fixed left-0 top-0 z-[999] flex h-screen w-full items-center justify-center bg-white lg:hidden`}
+          isOpen ? "left-0" : "-left-[768px] md:-left-[960px]"
+        } fixed top-0 z-[999] flex h-screen w-full items-center justify-center bg-white transition-all duration-300 lg:hidden`}
       >
         <button
           onClick={toggleMenu}

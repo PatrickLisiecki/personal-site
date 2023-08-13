@@ -6,16 +6,19 @@ import { faDev } from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
   return (
     <footer
-      className="flex items-center bg-gray-800 p-4 text-white lg:p-8"
+      className="flex items-center bg-[#333333] p-4 text-white lg:p-8"
       id="footer"
     >
       <div className="container mx-auto">
         <div className="flex flex-col items-center justify-between gap-y-6 lg:flex-row">
-          <p>
+          {/* Copyright */}
+          <p className="text-center sm:text-left">
             &copy; {new Date().getFullYear()} Patrick Lisiecki. All rights
             reserved.
           </p>
-          <div className="flex items-center gap-x-5 text-3xl">
+
+          {/* Social links */}
+          <nav className="flex items-center gap-x-5 text-3xl">
             <a
               href="https://www.linkedin.com/in/patricklisiecki"
               target="_blank"
@@ -40,7 +43,7 @@ export default function Footer() {
             >
               <FontAwesomeIcon icon={faDev} />
             </a>
-          </div>
+          </nav>
         </div>
       </div>
     </footer>

@@ -1,9 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 
-// Icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 // Skills & Tools
 const frontEndSkills = [
   {
@@ -30,13 +27,9 @@ const backEndSkills = [
     icon: <i className="devicon-express-original colored text-3xl"></i>,
   },
   {
-    title: "MongoDB",
-    icon: <i className="devicon-mongodb-plain colored text-3xl"></i>,
+    title: "PostgreSQL",
+    icon: <i className="devicon-postgresql-plain colored text-3xl"></i>,
   },
-  // {
-  //     title: "Mongoose",
-  //     icon: <FontAwesomeIcon icon={faFire} className="mx-2" />,
-  // },
 ];
 
 const tools = [
@@ -64,7 +57,7 @@ const tools = [
 
 export default function Skills() {
   return (
-    <div className="section bg-gray-100" id="skills">
+    <section className="section bg-gray-100" id="skills">
       <div className="container mx-auto">
         <div className="flex w-full flex-col items-center justify-center">
           {/* Header */}
@@ -169,6 +162,6 @@ export default function Skills() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

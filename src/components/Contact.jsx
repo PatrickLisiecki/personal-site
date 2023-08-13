@@ -12,7 +12,7 @@ const contactInfo = [
   {
     title: "Email",
     text: "impatricklisiecki@gmail.com",
-    link: "mailto:impatricklisiecki@gmail.com",
+    link: "",
     icon: "/at.png",
     alt: "Email",
   },
@@ -27,7 +27,7 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <div className="section bg-gray-100" id="contact">
+    <section className="section bg-gray-100" id="contact">
       <div className="container mx-auto flex items-center justify-center text-center">
         <div className=" flex w-full flex-col">
           {/* Heading */}
@@ -75,6 +75,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

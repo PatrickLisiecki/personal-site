@@ -5,8 +5,6 @@ import { useState } from "react";
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
-
 // Nav links
 const navData = [
   {
@@ -39,17 +37,18 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed z-[999] w-full bg-white p-8 shadow-bs">
+    <header className="fixed z-[999] w-full bg-white p-8 shadow-bs">
       <div className="container mx-auto flex flex-row items-center justify-between">
-        {/* Name / Logo */}
-        <a href="#home" className="text-[28px] md:text-3xl">
-          <span className="font-[500]">PATRICK</span>{" "}
-          <span className="font-[500]">LISIECKI</span>
-          <span className="text-accent">.</span>
+        {/* Name */}
+        <a href="#home">
+          <span className="text-[28px] uppercase md:text-3xl">
+            PATRICK LISIECKI
+          </span>
+          <span className="text-3xl text-accent">.</span>
         </a>
 
         {/* Nav links */}
-        <div className="hidden lg:block">
+        <nav className="hidden lg:block">
           <ul className="flex flex-row">
             {navData.map((item, index) => {
               return (
@@ -64,7 +63,7 @@ export default function Navbar() {
               );
             })}
           </ul>
-        </div>
+        </nav>
 
         {/* Mobile menu button */}
         <div className="lg:hidden">
@@ -72,7 +71,6 @@ export default function Navbar() {
             onClick={toggleMenu}
             className="flex items-center justify-center"
           >
-            {/* <FontAwesomeIcon icon={faBarsStaggered} className="w-6 h-6" /> */}
             <svg
               fill="none"
               stroke="currentColor"
@@ -92,19 +90,16 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      <div
+      <nav
         className={`${
           isOpen ? "block" : "hidden"
         } fixed left-0 top-0 z-[999] flex h-screen w-full items-center justify-center bg-white lg:hidden`}
       >
         <button
           onClick={toggleMenu}
-          className="text-primary transition-all duration-300 hover:text-accent"
+          className="absolute right-[2rem] top-[2rem] z-[100] flex cursor-pointer items-center justify-center rounded-full p-3 text-primary transition-all duration-300 hover:bg-gray-300 hover:text-accent"
         >
-          <FontAwesomeIcon
-            icon="fa-solid fa-xmark"
-            className="absolute right-[4rem] top-[2rem] z-[100] h-8 w-8 cursor-pointer"
-          />
+          <FontAwesomeIcon icon="fa-solid fa-xmark" className="h-8 w-8" />
         </button>
 
         {/* Links for mobile menu */}
@@ -126,7 +121,7 @@ export default function Navbar() {
             );
           })}
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }

@@ -3,7 +3,7 @@
 
 export default function About() {
   return (
-    <section className="section" id="about">
+    <section className="section dark:bg-dark/90 dark:text-white" id="about">
       <div className="container mx-auto">
         <div className="flex flex-col justify-between gap-y-10">
           <div className="flex w-full flex-col items-center justify-evenly gap-x-4 gap-y-4 lg:flex-row">
@@ -25,7 +25,7 @@ export default function About() {
               </span>
 
               {/* Description */}
-              <p className="font-[16px] text-secondary">
+              <p className="font-[16px] text-secondary dark:text-white">
                 Hello! My name is Patrick and I'm a computer science student at
                 the CUNY-College of Staten Island and a current resident of the
                 NYC Tech Talent Pipeline Program. When I'm not diving into lines

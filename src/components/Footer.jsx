@@ -6,7 +6,7 @@ import { faDev } from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
   return (
     <footer
-      className="flex items-center bg-[#333333] p-4 text-white lg:p-8"
+      className="dark:bg-darker flex items-center bg-primary text-white lg:p-8"
       id="footer"
     >
       <div className="container mx-auto">

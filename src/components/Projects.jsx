@@ -64,7 +64,7 @@ const projectsData = [
 export default function Projects() {
   return (
     <section
-      className="flex items-center py-[115px] lg:min-h-screen"
+      className="dark:bg-dark/90 flex items-center py-[115px] dark:text-white lg:min-h-screen"
       id="projects"
     >
       <div className="container mx-auto">
@@ -86,7 +86,7 @@ export default function Projects() {
               return (
                 <div
                   key={index}
-                  className="flex min-h-[300px] w-full flex-col gap-x-8 rounded-[2rem] p-5 shadow-bs md:min-h-[350px] lg:flex-row lg:items-center lg:justify-center"
+                  className="dark:bg-dark flex min-h-[300px] w-full flex-col gap-x-8 rounded-[2rem] bg-white p-5 shadow-bs md:min-h-[350px] lg:flex-row lg:items-center lg:justify-center"
                 >
                   {/* Project Image */}
                   <div className="mb-2 flex h-full min-w-[90%] items-center justify-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl lg:min-w-[60%] xl:mb-0">
@@ -103,7 +103,7 @@ export default function Projects() {
                     <span className="h3 mb-2">{item.title}</span>
 
                     {/* Project Description */}
-                    <p className="mb-4 max-w-[400px] text-center leading-tight text-secondary">
+                    <p className="mb-4 max-w-[400px] text-center leading-tight text-secondary dark:text-[#f2f2f2]">
                       {item.description}
                     </p>
 
@@ -113,7 +113,7 @@ export default function Projects() {
                         return (
                           <div
                             key={index}
-                            className="flex h-[50px] w-[50px] items-center justify-center rounded-full p-4 text-3xl shadow-bs"
+                            className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-white p-4 text-3xl shadow-bs"
                           >
                             {item}
                           </div>
@@ -144,14 +144,14 @@ export default function Projects() {
                       >
                         <button
                           disabled={item.demo === ""}
-                          className="group flex min-w-[120px] max-w-[140px] items-center justify-center overflow-hidden border border-primary bg-none px-4 py-3 transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-50 md:max-w-[160px]"
+                          className="group flex min-w-[120px] max-w-[140px] items-center justify-center overflow-hidden border border-primary bg-none px-4 py-3 transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-50 dark:border-white md:max-w-[160px]"
                         >
-                          <span className="text-primary transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0">
+                          <span className="transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0 dark:text-white">
                             Demo
                           </span>
                           <FontAwesomeIcon
                             icon="fa-solid fa-right-long"
-                            className="absolute -translate-y-[120%] text-[22px] text-primary opacity-0 transition-all duration-300 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100"
+                            className="absolute -translate-y-[120%] text-[22px] opacity-0 transition-all duration-300 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 dark:text-white"
                           />
                         </button>
                       </a>

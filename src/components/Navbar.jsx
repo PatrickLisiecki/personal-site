@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-
 import { useState } from "react";
 import { Link } from "react-scroll";
 
@@ -38,7 +37,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed z-[999] w-full bg-white p-4 shadow-bs sm:p-8">
+    <header className="dark:bg-darker fixed z-[999] w-full bg-white p-4 shadow-bs dark:text-white sm:p-8">
       <div className="container mx-auto flex flex-row items-center justify-between">
         {/* Name */}
         <Link
@@ -107,11 +106,11 @@ export default function Navbar() {
       <nav
         className={`${
           isOpen ? "left-0" : "-left-[768px] md:-left-[960px]"
-        } fixed top-0 z-[999] flex h-screen w-full items-center justify-center bg-white transition-all duration-300 lg:hidden`}
+        } dark:bg-darker fixed top-0 z-[999] flex h-screen w-full items-center justify-center bg-white transition-all duration-300 dark:text-white lg:hidden`}
       >
         <button
           onClick={toggleMenu}
-          className="absolute right-[2rem] top-[2rem] z-[100] flex cursor-pointer items-center justify-center rounded-full p-3 text-primary transition-all duration-300 hover:bg-gray-300 hover:text-accent"
+          className="absolute right-[2rem] top-[2rem] z-[100] flex cursor-pointer items-center justify-center rounded-full p-3 transition-all duration-300 hover:bg-gray-300 hover:text-accent dark:text-white dark:hover:text-accent"
         >
           <FontAwesomeIcon icon="fa-solid fa-xmark" className="h-8 w-8" />
         </button>

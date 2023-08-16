@@ -27,7 +27,10 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <section className="section bg-gray-100" id="contact">
+    <section
+      className="section dark:bg-dark bg-gray-100 dark:text-white"
+      id="contact"
+    >
       <div className="container mx-auto flex items-center justify-center text-center">
         <div className=" flex w-full flex-col">
           {/* Heading */}
@@ -59,7 +62,7 @@ export default function Contact() {
                   </div>
                   <div className="flex flex-col items-center justify-center gap-y-[4px] lg:items-start lg:justify-start lg:gap-y-[0px]">
                     <span className="text-2xl font-semibold">{item.title}</span>
-                    <span className="cursor-pointer text-xl text-secondary hover:text-accent">
+                    <span className="cursor-pointer text-xl text-secondary hover:text-accent dark:text-white dark:hover:text-accent">
                       {item.link ? (
                         <a href={item.link} target="_blank" rel="noreferrer">
                           {item.text}

@@ -57,7 +57,10 @@ const tools = [
 
 export default function Skills() {
   return (
-    <section className="section bg-gray-100" id="skills">
+    <section
+      className="section dark:bg-dark bg-gray-100 dark:text-white"
+      id="skills"
+    >
       <div className="container mx-auto">
         <div className="flex w-full flex-col items-center justify-center">
           {/* Header */}
@@ -74,7 +77,7 @@ export default function Skills() {
 
           {/* Front-End Skills */}
           <div className="flex w-full flex-col items-center justify-evenly gap-x-4 gap-y-4 lg:flex-row">
-            <div className="min-h-[400px] min-w-[350px] rounded-[10px] bg-gray-300 p-10 transition-all duration-300 hover:-translate-y-2 md:min-h-[450px] lg:min-w-[300px] xl:min-w-[350px]">
+            <div className="min-h-[400px] min-w-[350px] rounded-[10px] bg-gray-300 p-10 shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-[#2A2F3F] md:min-h-[450px] lg:min-w-[300px] xl:min-w-[350px]">
               <div className="flex h-full flex-col items-center justify-center">
                 <div className="flex w-full items-center justify-center">
                   <img
@@ -103,7 +106,7 @@ export default function Skills() {
             </div>
 
             {/* Back-End Skills */}
-            <div className="min-h-[400px] min-w-[350px] rounded-[10px] bg-gray-300 p-10 transition-all duration-300 hover:-translate-y-2 md:min-h-[450px] lg:min-w-[300px] xl:min-w-[350px]">
+            <div className="min-h-[400px] min-w-[350px] rounded-[10px] bg-gray-300 p-10 shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-[#2A2F3F] md:min-h-[450px] lg:min-w-[300px] xl:min-w-[350px]">
               <div className="flex h-full flex-col items-center justify-center">
                 <div className="flex w-full items-center justify-center">
                   <img
@@ -132,7 +135,7 @@ export default function Skills() {
             </div>
 
             {/* Tools */}
-            <div className="min-h-[400px] min-w-[350px] rounded-[10px] bg-gray-300 p-10 transition-all duration-300 hover:-translate-y-2 md:min-h-[450px] lg:min-w-[300px] xl:min-w-[350px]">
+            <div className="min-h-[400px] min-w-[350px] rounded-[10px] bg-gray-300 p-10 shadow-xl transition-all duration-300 hover:-translate-y-2 dark:bg-[#2A2F3F] md:min-h-[450px] lg:min-w-[300px] xl:min-w-[350px]">
               <div className="flex h-full flex-col items-center justify-center">
                 <div className="flex w-full items-center justify-center">
                   <img

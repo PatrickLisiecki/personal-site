@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 
+// Animation
 import Lottie from "lottie-react";
 import animation from "../assets/animation.json";
 
@@ -11,7 +12,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
   return (
-    <section className="section min-h-screen bg-gray-100" id="home">
+    <section
+      className="section dark:bg-dark min-h-screen bg-gray-100 dark:text-white"
+      id="home"
+    >
       <div className="container mx-auto flex flex-col items-center justify-center lg:flex-row">
         <div className="flex min-w-[300px] flex-col justify-center text-center md:min-w-[500px] xl:pt-0 xl:text-left">
           {/* Title */}
@@ -30,7 +34,7 @@ export default function Home() {
           </div>
 
           {/* Text */}
-          <p className="mx-auto mb-4 max-w-[350px] text-primary xl:mx-0 xl:max-w-[475px]">
+          <p className="mx-auto mb-4 max-w-[350px] dark:text-white xl:mx-0 xl:max-w-[475px]">
             Hello! I'm Patrick Lisiecki, a passionate web developer and CS
             student based in New York. 🗽
           </p>
@@ -62,13 +66,13 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              <button className="group flex min-w-[120px] max-w-[140px] items-center justify-center overflow-hidden border border-primary bg-none px-4 py-3 transition-all duration-300 md:max-w-[160px]">
-                <span className="text-primary transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0">
+              <button className="group flex min-w-[120px] max-w-[140px] items-center justify-center overflow-hidden border border-primary bg-none px-4 py-3 transition-all duration-300 dark:border-white md:max-w-[160px]">
+                <span className="transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0 dark:text-white">
                   Resume
                 </span>
                 <FontAwesomeIcon
                   icon="fa-solid fa-right-long"
-                  className="absolute -translate-y-[120%] text-[22px] text-primary opacity-0 transition-all duration-300 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100"
+                  className="absolute -translate-y-[120%] text-[22px] opacity-0 transition-all duration-300 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 dark:text-white"
                 />
               </button>
             </a>

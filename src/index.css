@@ -2,33 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #fff;
-  border-radius: 50px;
-}
-
-::-webkit-scrollbar-track:active,
-::-webkit-scrollbar-track:hover {
-  background-color: #fff;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #8e8e8e;
-  border-radius: 50px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #878787;
-}
-
-::-webkit-scrollbar-thumb:active {
-  background-color: #8e8e8e;
-}
-
 @layer base {
   body {
     @apply font-poppins text-lg leading-8 text-primary;
@@ -44,15 +17,6 @@
   }
   .h3 {
     @apply mb-6 font-poppins text-[26px] font-semibold leading-[46px];
-  }
-  .btn {
-    @apply rounded-full font-poppins font-medium text-white;
-  }
-  .btn-sm {
-    @apply h-[48px] px-6 text-sm;
-  }
-  .btn-lg {
-    @apply h-[56px] px-10 text-base;
   }
   .section {
     @apply flex items-center py-28 lg:h-screen lg:py-24;

@@ -1,11 +1,9 @@
 /* eslint-disable no-unused-vars */
-
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
 
 // Nav links
 const navData = [
@@ -39,32 +37,46 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed z-[999] w-full bg-white p-8 shadow-bs">
+    <header className="dark:bg-darker fixed z-[999] w-full bg-white p-4 shadow-bs dark:text-white sm:p-8">
       <div className="container mx-auto flex flex-row items-center justify-between">
-        {/* Name / Logo */}
-        <a href="#home" className="text-[28px] md:text-3xl">
-          <span className="font-[500]">PATRICK</span>{" "}
-          <span className="font-[500]">LISIECKI</span>
-          <span className="text-accent">.</span>
-        </a>
+        {/* Name */}
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          spy={true}
+          offset={0}
+          className="cursor-pointer"
+        >
+          <span className="text-[24px] uppercase md:text-3xl">
+            PATRICK LISIECKI
+          </span>
+          <span className="text-3xl text-accent">.</span>
+        </Link>
 
         {/* Nav links */}
-        <div className="hidden lg:block">
+        <nav className="hidden lg:block">
           <ul className="flex flex-row">
             {navData.map((item, index) => {
               return (
                 <li key={index}>
-                  <a
-                    href={item.link}
-                    className="mx-4 transition-all duration-300 hover:text-accent"
+                  <Link
+                    to={item.link.substring(1)}
+                    smooth={true}
+                    duration={300}
+                    spy={true}
+                    offset={0}
+                    className="mx-4 cursor-pointer"
                   >
-                    {item.title}
-                  </a>
+                    <span className="font-medium transition-all duration-300 hover:text-accent">
+                      {item.title}
+                    </span>
+                  </Link>
                 </li>
               );
             })}
           </ul>
-        </div>
+        </nav>
 
         {/* Mobile menu button */}
         <div className="lg:hidden">
@@ -72,13 +84,12 @@ export default function Navbar() {
             onClick={toggleMenu}
             className="flex items-center justify-center"
           >
-            {/* <FontAwesomeIcon icon={faBarsStaggered} className="w-6 h-6" /> */}
             <svg
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
-              className="h-7 w-7 transition-all duration-300 hover:text-accent"
+              className="h-6 w-6 transition-all duration-300 hover:text-accent"
             >
               <path
                 strokeLinecap="round"
@@ -92,19 +103,16 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      <div
+      <nav
         className={`${
-          isOpen ? "block" : "hidden"
-        } fixed left-0 top-0 z-[999] flex h-screen w-full items-center justify-center bg-white lg:hidden`}
+          isOpen ? "left-0" : "-left-[768px] md:-left-[960px]"
+        } dark:bg-darker fixed top-0 z-[999] flex h-screen w-full items-center justify-center bg-white transition-all duration-300 dark:text-white lg:hidden`}
       >
         <button
           onClick={toggleMenu}
-          className="text-primary transition-all duration-300 hover:text-accent"
+          className="absolute right-[2rem] top-[2rem] z-[100] flex cursor-pointer items-center justify-center rounded-full p-3 transition-all duration-300 hover:bg-gray-300 hover:text-accent dark:text-white dark:hover:text-accent"
         >
-          <FontAwesomeIcon
-            icon="fa-solid fa-xmark"
-            className="absolute right-[4rem] top-[2rem] z-[100] h-8 w-8 cursor-pointer"
-          />
+          <FontAwesomeIcon icon="fa-solid fa-xmark" className="h-8 w-8" />
         </button>
 
         {/* Links for mobile menu */}
@@ -116,17 +124,16 @@ export default function Navbar() {
                 onClick={toggleMenu}
                 className="flex items-center justify-center"
               >
-                <a
-                  href={item.link}
-                  className="text-2xl font-semibold transition-all duration-300 hover:text-accent"
-                >
-                  {item.title}
+                <a href={item.link}>
+                  <span className="text-2xl font-semibold transition-all duration-300 hover:text-accent">
+                    {item.title}
+                  </span>
                 </a>
               </li>
             );
           })}
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }

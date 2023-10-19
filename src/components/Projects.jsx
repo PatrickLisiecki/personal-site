@@ -11,7 +11,7 @@ const projectsData = [
       "Flex Fusion is a fitness application designed to provide users with a comprehensive and personalized fitness experience.",
     link: "https://github.com/PatrickLisiecki/flex-fusion",
     image: "/flex.png",
-    demo: "",
+    demo: "https://github.com/PatrickLisiecki/flex-fusion#-demo",
     tech: [
       <i className="devicon-react-original colored"></i>,
       <i className="devicon-tailwindcss-plain colored"></i>,

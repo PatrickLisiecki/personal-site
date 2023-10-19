@@ -24,7 +24,7 @@ export default function Home() {
               Patrick Lisiecki
             </h1>
             <h2 className="h2 mb-0 text-[25px] font-semibold md:text-[40px]">
-              Web Developer
+              Software Developer
               <img
                 src="/flash.png"
                 alt="Flash"
@@ -35,7 +35,7 @@ export default function Home() {
 
           {/* Text */}
           <p className="mx-auto mb-4 max-w-[350px] dark:text-white xl:mx-0 xl:max-w-[475px]">
-            Hello! I'm Patrick Lisiecki, a passionate web developer and CS
+            Hello! I'm Patrick Lisiecki, a passionate software developer and CS
             student based in New York. 🗽
           </p>
 
@@ -62,7 +62,7 @@ export default function Home() {
 
             {/* Resume Button */}
             <a
-              href="https://drive.google.com/file/d/18HfoIYtUPc9nhOxsYO9AgdVYH5BKXtEC/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Uelyrd3QCWSo8FobVakih8S2_k1V-V3Q/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
             >

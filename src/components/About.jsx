@@ -26,7 +26,7 @@ export default function About() {
 
               {/* Description */}
               <p className="font-[16px] text-secondary dark:text-white">
-                Greetings! My name is Patrick and I'm an upper-junior computer science student at
+                Greetings! My name is Patrick and I'm a senior computer science student at
                 the City University of New York-College of Staten Island and a current resident of the
                 NYC Tech Talent Pipeline Program. When I'm not working on a project or schoolwork,
                 you can find me at the gym, where I push myself to
@@ -37,7 +37,7 @@ export default function About() {
                 computers, which led me to choose computer science as my
                 academic pursuit. Through this platform, I aim to share my
                 experiences, projects, and insights, as well as connect with
-                others who share my passion for all things tech and beyond.
+                others who share my passion for all things tech.
               </p>
             </div>
           </div>

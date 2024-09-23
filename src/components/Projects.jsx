@@ -6,12 +6,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Projects data
 const projectsData = [
   {
+    title: "Word Lab",
+    description:
+      "Word Lab is a study assistant for expanding language vocabulary with randomly generated games.",
+    link: "https://github.com/PatrickLisiecki/spelling-bee-app",
+    image: "/word-lab.png",
+    demo: "https://github.com/PatrickLisiecki/spelling-bee-app",
+    tech: [
+      <i className="devicon-react-original colored"></i>,
+      <i className="devicon-tailwindcss-plain colored"></i>,
+      <i className="devicon-nodejs-plain colored"></i>,
+      <i className="devicon-express-original colored"></i>,
+      <i className="devicon-sqlite-plain colored"></i>,
+    ],
+  },
+  {
     title: "Flex Fusion",
     description:
       "Flex Fusion is a fitness application designed to provide users with a comprehensive and personalized fitness experience.",
     link: "https://github.com/PatrickLisiecki/flex-fusion",
     image: "/flex.png",
-    demo: "https://github.com/PatrickLisiecki/flex-fusion#-demo",
+    demo: "https://flexfusion.xyz/",
     tech: [
       <i className="devicon-react-original colored"></i>,
       <i className="devicon-tailwindcss-plain colored"></i>,
@@ -64,7 +79,7 @@ const projectsData = [
 export default function Projects() {
   return (
     <section
-      className="dark:bg-dark/90 flex items-center py-[115px] dark:text-white lg:min-h-screen"
+      className="flex items-center py-[115px] dark:bg-dark/90 dark:text-white lg:min-h-screen"
       id="projects"
     >
       <div className="container mx-auto">
@@ -86,7 +101,7 @@ export default function Projects() {
               return (
                 <div
                   key={index}
-                  className="dark:bg-dark flex min-h-[300px] w-full flex-col gap-x-8 rounded-[2rem] bg-white p-5 shadow-bs md:min-h-[350px] lg:flex-row lg:items-center lg:justify-center"
+                  className="flex min-h-[300px] w-full flex-col gap-x-8 rounded-[2rem] bg-white p-5 shadow-bs dark:bg-dark md:min-h-[350px] lg:flex-row lg:items-center lg:justify-center"
                 >
                   {/* Project Image */}
                   <div className="mb-2 flex h-full min-w-[90%] items-center justify-center overflow-hidden rounded-lg shadow-lg hover:shadow-xl lg:min-w-[60%] xl:mb-0">
@@ -108,7 +123,7 @@ export default function Projects() {
                     </p>
 
                     {/* Project Tech */}
-                    <div className="mb-8 flex w-[50%] items-center justify-evenly gap-x-4">
+                    <div className="mx-auto mb-8 flex items-center justify-evenly gap-x-4">
                       {item.tech.map((item, index) => {
                         return (
                           <div

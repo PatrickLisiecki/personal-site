@@ -1,27 +1,18 @@
 import { useState, useEffect } from "react";
 
 // Components
-import Home from "./components/Home";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Skills from "./components/Skills";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-// Global Icons
-import { library } from "@fortawesome/fontawesome-svg-core";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-
-import { faXmark, faRightLong, faMoon } from "@fortawesome/free-solid-svg-icons";
-
-library.add(faSquareGithub, faLinkedin, faXmark, faRightLong, faMoon);
+// Sections
+import Home from "@/components/sections/Home";
+import About from "@/components/sections/About";
+import Projects from "@/components/sections/Projects";
+import Contact from "@/components/sections/Contact";
+import Skills from "@/components/sections/Skills";
 
 function App() {
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
 
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
@@ -35,16 +26,36 @@ function App() {
 
     return (
         <main className="page relative">
-            <Navbar />
-            <Home />
-            <About />
-            <Skills />
-            <Projects />
-            <Contact />
+            <Header />
+            <div className="flex flex-row">
+                <aside className="dark:border-divider sticky top-0 hidden h-screen w-20 flex-col items-center justify-center gap-6 border-r-2 border-secondary backdrop-blur-lg dark:bg-dark md:flex"></aside>
+                <div className="flex w-full flex-col">
+                    <Home />
+                    <About />
+                    <Skills />
+                    <Projects />
+                    <Contact />
+                </div>
+                <aside className="dark:border-divider sticky top-0 hidden h-screen w-20 flex-col items-center justify-center gap-6 border-l-2 border-secondary backdrop-blur-lg dark:bg-dark md:flex">
+                    <button
+                        onClick={toggleDarkMode}
+                        className={`${
+                            darkMode
+                                ? "bg-white text-black hover:text-blue-500"
+                                : "bg-black text-white hover:text-blue-500"
+                        } grid h-[50px] w-[50px] place-items-center rounded-xl`}
+                    >
+                        <span>X</span>
+                    </button>
+                    <span className="absolute right-[50px] top-1/2 mr-[5px] min-w-[150px] -translate-y-1/2 rounded bg-black p-2 text-center text-sm text-white opacity-0 shadow transition-opacity group-hover:opacity-100">
+                        Toggle Dark Mode
+                    </span>
+                </aside>
+            </div>
             <Footer />
 
             {/* Dark mode toggle */}
-            <div className="group fixed bottom-[15px] right-[15px] rounded-full bg-none shadow-bs">
+            {/* <div className="group fixed bottom-[15px] right-[15px] rounded-full bg-none shadow-bs">
                 <button
                     onClick={toggleDarkMode}
                     className={`${
@@ -53,11 +64,10 @@ function App() {
                 >
                     <FontAwesomeIcon icon={faMoon} />
                 </button>
-                {/* Tooltip */}
                 <span className="absolute right-[50px] top-1/2 mr-[5px] min-w-[150px] -translate-y-1/2 rounded bg-black p-2 text-center text-sm text-white opacity-0 shadow transition-opacity group-hover:opacity-100">
                     Toggle Dark Mode
                 </span>
-            </div>
+            </div> */}
         </main>
     );
 }

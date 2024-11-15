@@ -19,15 +19,25 @@ module.exports = {
         },
         extend: {
             colors: {
-                primary: "#333333",
-                secondary: "#777777",
+                neutral: {
+                    dark: {
+                        primary: "#ffffff",
+                        secondary: "#b3b3b3",
+                    },
+                    light: {
+                        primary: "#333333",
+                        secondary: "#666666",
+                        tertiary: "#999999",
+                        muted: "#b3b3b3",
+                    },
+                },
+                divider: {
+                    primary: "#404040",
+                    secondary: "#D3D3D3",
+                },
                 accent: "#38BDF8",
-                dark: "#1D2330",
-                darker: "#13161F",
-            },
-            boxShadow: {
-                bs: "0 0 10px rgba(0,0,0,.1)",
-                soft: "-5px -5px 10px #b3b3b3,5px 5px 10px #ffffff",
+                background: "#121212",
+                muted: "#2D2D2D",
             },
         },
     },

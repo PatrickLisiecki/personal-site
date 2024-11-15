@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply font-poppins text-lg leading-8 text-primary;
+        @apply font-poppins text-lg leading-8;
     }
     .page {
         @apply h-screen w-full;
@@ -19,6 +19,6 @@
         @apply mb-6 font-poppins text-[26px] font-semibold leading-[46px];
     }
     .section {
-        @apply flex items-center py-28 lg:h-screen lg:py-24;
+        @apply flex items-center py-28 lg:py-24;
     }
 }

@@ -1,35 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Link } from "react-scroll";
+import PropTypes from "prop-types";
 
-// Icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { X } from "lucide-react";
 
-// Nav links
-const navData = [
-    {
-        title: "Home",
-        link: "#home",
-    },
-    {
-        title: "About",
-        link: "#about",
-    },
-    {
-        title: "Skills",
-        link: "#skills",
-    },
-    {
-        title: "Projects",
-        link: "#projects",
-    },
-    {
-        title: "Contact",
-        link: "#contact",
-    },
-];
-
-export default function Navbar() {
+export default function Navbar({ navData }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -37,15 +13,13 @@ export default function Navbar() {
     };
 
     return (
-        <header className="dark:border-divider fixed z-[999] w-full border-b-2 border-secondary bg-white p-4 px-24 text-dark dark:bg-dark dark:text-primary">
+        <header className="dark:bg-background border-divider-secondary dark:text-neutral-dark-primary dark:border-divider-primary text-neutral-light-primary fixed z-[999] w-full border-b-2 bg-white p-4 lg:px-24">
             <div className="flex flex-row items-center justify-between">
-                {/* Name */}
                 <Link to="home" smooth={true} duration={500} spy={true} offset={0} className="cursor-pointer">
                     <span className="text-[24px] uppercase md:text-3xl">PATRICK LISIECKI</span>
                     <span className="text-3xl text-accent">.</span>
                 </Link>
 
-                {/* Nav links */}
                 <nav className="hidden lg:block">
                     <ul className="flex flex-row">
                         {navData.map((item, index) => {
@@ -69,7 +43,6 @@ export default function Navbar() {
                     </ul>
                 </nav>
 
-                {/* Mobile menu button */}
                 <div className="lg:hidden">
                     <button onClick={toggleMenu} className="flex items-center justify-center">
                         <svg
@@ -90,20 +63,18 @@ export default function Navbar() {
                 </div>
             </div>
 
-            {/* Mobile menu */}
             <nav
                 className={`${
                     isOpen ? "left-0" : "-left-[768px] md:-left-[960px]"
-                } fixed top-0 z-[999] flex h-screen w-full items-center justify-center bg-white transition-all duration-300 dark:bg-darker dark:text-white lg:hidden`}
+                } dark:bg-background fixed top-0 z-[999] flex h-screen w-full items-center justify-center bg-white transition-all duration-300 lg:hidden`}
             >
                 <button
                     onClick={toggleMenu}
                     className="absolute right-[2rem] top-[2rem] z-[100] flex cursor-pointer items-center justify-center rounded-full p-3 transition-all duration-300 hover:bg-gray-300 hover:text-accent dark:text-white dark:hover:text-accent"
                 >
-                    <FontAwesomeIcon icon="fa-solid fa-xmark" className="h-8 w-8" />
+                    <X />
                 </button>
 
-                {/* Links for mobile menu */}
                 <ul className="flex min-w-[150px] flex-col gap-y-8">
                     {navData.map((item, index) => {
                         return (
@@ -121,3 +92,12 @@ export default function Navbar() {
         </header>
     );
 }
+
+Navbar.propTypes = {
+    navData: PropTypes.arrayOf(
+        PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired,
+        }),
+    ).isRequired,
+};

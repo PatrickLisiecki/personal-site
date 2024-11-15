@@ -37,8 +37,8 @@ export default function Navbar() {
     };
 
     return (
-        <header className="fixed z-[999] w-full bg-white p-4 shadow-bs dark:bg-darker dark:text-white sm:p-8">
-            <div className="container mx-auto flex flex-row items-center justify-between">
+        <header className="dark:border-divider fixed z-[999] w-full border-b-2 border-secondary bg-white p-4 px-24 text-dark dark:bg-dark dark:text-primary">
+            <div className="flex flex-row items-center justify-between">
                 {/* Name */}
                 <Link to="home" smooth={true} duration={500} spy={true} offset={0} className="cursor-pointer">
                     <span className="text-[24px] uppercase md:text-3xl">PATRICK LISIECKI</span>

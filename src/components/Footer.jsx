@@ -1,43 +1,33 @@
-// Icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { faDev } from "@fortawesome/free-brands-svg-icons";
+import { Linkedin, Github } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="flex items-center bg-primary text-white dark:bg-darker lg:p-8" id="footer">
+        <footer
+            className="dark:bg-background border-divider-secondary dark:text-neutral-dark-primary dark:border-divider-primary text-neutral-light-primary flex w-full items-center border-t-2 bg-white lg:p-8"
+            id="footer"
+        >
             <div className="container mx-auto">
                 <div className="flex flex-col items-center justify-between gap-y-6 lg:flex-row">
-                    {/* Copyright */}
                     <p className="text-center sm:text-left">
-                        &copy; {new Date().getFullYear()} Patrick Lisiecki. All rights reserved.
+                        &copy; {new Date().getFullYear()} Patrick Lisiecki. No rights reserved.
                     </p>
 
-                    {/* Social links */}
                     <nav className="flex items-center gap-x-5 text-3xl">
                         <a
                             href="https://www.linkedin.com/in/patricklisiecki"
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             className="transition-all duration-300 hover:text-accent"
                         >
-                            <FontAwesomeIcon icon="fa-brands fa-linkedin" />
+                            <Linkedin />
                         </a>
                         <a
                             href="https://github.com/PatrickLisiecki"
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             className="transition-all duration-300 hover:text-accent"
                         >
-                            <FontAwesomeIcon icon="fa-brands fa-square-github" />
-                        </a>
-                        <a
-                            href="https://dev.to/patricklisiecki"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="transition-all duration-300 hover:text-accent"
-                        >
-                            <FontAwesomeIcon icon={faDev} />
+                            <Github />
                         </a>
                     </nav>
                 </div>

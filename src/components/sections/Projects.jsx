@@ -115,12 +115,15 @@ export default function Projects({ projectsData }) {
 }
 
 Projects.propTypes = {
-    projectsData: {
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired,
-        img: PropTypes.string.isRequired,
-        demo: PropTypes.string.isRequired,
-        tech: PropTypes.arrayOf(PropTypes.string).isRequired,
-    },
+    projectsData: PropTypes.arrayOf(
+        PropTypes.shape({
+            img: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
+            description: PropTypes.string.isRequired,
+            type: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired,
+            demo: PropTypes.string,
+            tech: PropTypes.arrayOf(PropTypes.string).isRequired,
+        }),
+    ).isRequired,
 };

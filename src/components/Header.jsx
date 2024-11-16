@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import PropTypes from "prop-types";
 
-import { X } from "lucide-react";
+import { X, Menu } from "lucide-react";
 
 export default function Navbar({ navData }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +45,7 @@ export default function Navbar({ navData }) {
 
                 <div className="lg:hidden">
                     <button onClick={toggleMenu} className="flex items-center justify-center">
-                        <svg
+                        {/* <svg
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -58,7 +58,8 @@ export default function Navbar({ navData }) {
                                 strokeWidth="2"
                                 d="M4 6h16M4 12h16m-7 6h7"
                             />
-                        </svg>
+                        </svg> */}
+                        <Menu className="h-6 w-6 transition-all duration-300 hover:text-accent" />
                     </button>
                 </div>
             </div>
@@ -70,9 +71,9 @@ export default function Navbar({ navData }) {
             >
                 <button
                     onClick={toggleMenu}
-                    className="absolute right-[2rem] top-[2rem] z-[100] flex cursor-pointer items-center justify-center rounded-full p-3 transition-all duration-300 hover:bg-gray-300 hover:text-accent dark:text-white dark:hover:text-accent"
+                    className="absolute right-[2rem] top-[2rem] z-[100] flex cursor-pointer items-center justify-center transition-all duration-300 hover:text-accent"
                 >
-                    <X />
+                    <X size={36} />
                 </button>
 
                 <ul className="flex min-w-[150px] flex-col gap-y-8">

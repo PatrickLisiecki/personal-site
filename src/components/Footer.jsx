@@ -3,7 +3,7 @@ import { Linkedin, Github } from "lucide-react";
 export default function Footer() {
     return (
         <footer
-            className="dark:bg-background border-divider-secondary dark:text-neutral-dark-primary dark:border-divider-primary text-neutral-light-primary flex w-full items-center border-t-2 bg-white lg:p-8"
+            className="dark:bg-background border-divider-secondary dark:text-neutral-dark-primary dark:border-divider-primary text-neutral-light-primary flex w-full items-center border-t-2 bg-white lg:p-8 p-6"
             id="footer"
         >
             <div className="container mx-auto">

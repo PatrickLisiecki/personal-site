@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 import { X, Menu } from "lucide-react";
 
-export default function Navbar({ navData }) {
+export default function Header({ navData }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -45,20 +45,6 @@ export default function Navbar({ navData }) {
 
                 <div className="lg:hidden">
                     <button onClick={toggleMenu} className="flex items-center justify-center">
-                        {/* <svg
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-6 w-6 transition-all duration-300 hover:text-accent"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M4 6h16M4 12h16m-7 6h7"
-                            />
-                        </svg> */}
                         <Menu className="h-6 w-6 transition-all duration-300 hover:text-accent" />
                     </button>
                 </div>
@@ -94,7 +80,7 @@ export default function Navbar({ navData }) {
     );
 }
 
-Navbar.propTypes = {
+Header.propTypes = {
     navData: PropTypes.arrayOf(
         PropTypes.shape({
             title: PropTypes.string.isRequired,

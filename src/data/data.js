@@ -8,6 +8,10 @@ export const navData = [
         link: "#about",
     },
     {
+        title: "Experience",
+        link: "#experience",
+    },
+    {
         title: "Skills",
         link: "#skills",
     },
@@ -18,6 +22,36 @@ export const navData = [
     {
         title: "Contact",
         link: "#contact",
+    },
+];
+
+export const experienceData = [
+    {
+        role: "Software Engineer Intern",
+        company: "Research Foundation of CUNY - Climastry",
+        location: "New York City, NY",
+        mode: "Remote",
+        time: "Jun. 2024 - Aug. 2024",
+        description: "Technologies Used: TypeScript, React, Redux, AWS (S3, Lambda, API Gateway), GitHub Actions",
+        img: "/rfcuny.png",
+    },
+    {
+        role: "Software Engineer Intern",
+        company: "SPEAKHIRE",
+        location: "New York City, NY",
+        mode: "Remote",
+        time: "Feb. 2024 - Apr. 2024",
+        description: "Technologies Used: TypeScript, React, Redux (RTK Query), Material UI, react-i18next Framework",
+        img: "/speakhire.png",
+    },
+    {
+        role: "Software Engineer Fellow",
+        company: "NYC Tech Talent Pipeline",
+        location: "Staten Island, NY",
+        mode: "Hybrid",
+        time: "Jun. 2023 - Aug. 2023",
+        description: "Technologies Used: JavaScript, React, PostgreSQL, Node.js, Express.js, Jest, AWS (EC2)",
+        img: "/ttp.png",
     },
 ];
 

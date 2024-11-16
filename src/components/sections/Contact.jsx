@@ -18,9 +18,9 @@ export default function Contact() {
                     I'm always interested in working with others.
                 </p>
 
-                <div className="flex flex-col gap-4 lg:flex-row lg:gap-24">
+                <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
                     <div className="dark:hover:bg-muted flex items-center justify-between rounded-xl border p-4 hover:bg-gray-100">
-                        <div className="flex w-[300px] items-center gap-4">
+                        <div className="flex items-center gap-4">
                             <Map size={40} />
                             <div>
                                 <span className="text-[16px]">Location</span>
@@ -31,7 +31,7 @@ export default function Contact() {
                         </div>
                     </div>
                     <div className="dark:hover:bg-muted flex items-center justify-between rounded-xl border p-4 hover:bg-gray-100">
-                        <div className="flex w-[300px] items-center gap-4">
+                        <div className="flex items-center gap-4">
                             <Mail size={40} />
                             <div>
                                 <span className="text-[16px]">Email</span>
@@ -47,7 +47,7 @@ export default function Contact() {
                         rel="noopener noreferrer"
                         className="dark:hover:bg-muted group flex items-center justify-between rounded-xl border p-4 transition-colors duration-200 hover:bg-gray-100"
                     >
-                        <div className="flex w-[300px] items-center gap-4">
+                        <div className="flex items-center gap-4">
                             <Users size={40} />
                             <div>
                                 <span className="text-[16px]">LinkedIn</span>

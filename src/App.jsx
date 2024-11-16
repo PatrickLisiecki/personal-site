@@ -1,19 +1,16 @@
 import { useState, useEffect } from "react";
 
-// Components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LeftAside from "@/components/LeftAside";
 import RightAside from "@/components/RightAside";
 
-// Sections
 import Home from "@/components/sections/Home";
 import About from "@/components/sections/About";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Skills from "@/components/sections/Skills";
 
-// Data
 import { navData } from "@/data/data";
 import { skillsData } from "@/data/data";
 import { projectsData } from "@/data/data";
@@ -40,10 +37,10 @@ function App() {
                     <Skills skillsData={skillsData} />
                     <Projects projectsData={projectsData} />
                     <Contact />
+                    <Footer />
                 </div>
                 <RightAside toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
             </div>
-            <Footer />
 
             {/* Dark mode toggle */}
             {/* <div className="group fixed bottom-[15px] right-[15px] rounded-full bg-none shadow-bs">

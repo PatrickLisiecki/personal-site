@@ -27,7 +27,7 @@ export default function Experience({ experienceData }) {
                                         <img
                                             src={experience.img}
                                             alt={experience.company}
-                                            className="h-[50px] w-[50px] rounded-xl bg-white"
+                                            className="h-[50px] w-[50px] rounded-md bg-white"
                                         />
                                         <div>
                                             <h3 className="text-neutral-light-primary dark:text-neutral-dark-primary">

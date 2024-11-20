@@ -54,7 +54,7 @@ function App() {
                         darkMode
                             ? "bg-white text-black hover:text-yellow-500"
                             : "bg-black text-white hover:text-blue-500"
-                    } grid h-[50px] w-[50px] place-items-center rounded-full shadow-lg transition-all duration-300`}
+                    } grid h-[50px] w-[50px] place-items-center rounded-full transition-all duration-300`}
                 >
                     {darkMode ? <Sun /> : <Moon />}
                 </button>

@@ -7,26 +7,22 @@ import { MoveRight, Linkedin, Github } from "lucide-react";
 export default function Home() {
     return (
         <section
-            className="section dark:bg-background dark:text-neutral-dark-primary text-neutral-light-primary h-screen"
+            className="section h-screen text-neutral-light-primary dark:bg-background dark:text-neutral-dark-primary"
             id="home"
         >
-            <div className="container mx-auto flex flex-col-reverse items-center justify-center gap-y-8 lg:flex-row lg:gap-x-16">
+            <div className="container mx-auto flex flex-col-reverse items-center justify-center gap-y-16 lg:flex-row lg:gap-x-16">
                 <div className="flex min-w-[300px] flex-col justify-center md:min-w-[500px] xl:text-left">
-                    <div className="leading-[0.8]">
-                        <h1 className="h1 mb-0 block font-semibold leading-none">Patrick Lisiecki</h1>
-                        <h2 className="h2 text-neutral-light-secondary mb-0 text-[25px] font-semibold dark:text-gray-300 md:text-[40px]">
-                            Software Engineer
-                        </h2>
-                    </div>
+                    <h1 className="h1 mb-0 block font-semibold leading-none">Patrick Lisiecki</h1>
+                    <h2 className="h2 mb-2 text-[25px] font-semibold text-accent md:text-[40px]">Software Engineer</h2>
 
-                    <p className="text-neutral-light-secondary dark:text-neutral-dark-secondary mx-auto mb-4 max-w-[350px] text-[14px] lg:text-[18px] xl:mx-0 xl:max-w-[475px]">
+                    <p className="mb-4 max-w-[350px] text-[14px] leading-relaxed text-neutral-light-secondary dark:text-neutral-dark-secondary sm:max-w-[425px] sm:text-[18px] xl:max-w-[475px]">
                         Hello! I'm Patrick Lisiecki, a full-stack software engineer and CS student based in New York. 🗽
                     </p>
 
-                    <div className="mb-4 flex items-center justify-start gap-x-4 lg:justify-center xl:justify-start">
+                    <div className="mb-4 flex items-center justify-start gap-x-4">
                         <Link to="contact" smooth={true} duration={500} spy={true} offset={0}>
-                            <button className="group flex min-w-[120px] max-w-[140px] items-center justify-center overflow-hidden rounded-xl border-2 border-accent bg-accent px-4 py-2 transition-all duration-300 md:max-w-[160px]">
-                                <span className="text-white transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0">
+                            <button className="group flex w-[100px] items-center justify-center overflow-hidden rounded-xl border-2 border-accent bg-accent py-1 transition-all duration-300 sm:w-[120px] sm:py-2">
+                                <span className="text-[16px] text-white transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0 sm:text-[18px]">
                                     Contact
                                 </span>
                                 <MoveRight
@@ -37,8 +33,8 @@ export default function Home() {
                         </Link>
 
                         <a href="/patrick_lisiecki_resume.pdf" target="_blank" rel="noopener noreferrer">
-                            <button className="group flex min-w-[120px] max-w-[140px] items-center justify-center overflow-hidden rounded-xl border-2 bg-none px-4 py-2 transition-all duration-300 md:max-w-[160px]">
-                                <span className="transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0">
+                            <button className="group flex w-[100px] items-center justify-center overflow-hidden rounded-xl border-2 bg-none py-1 transition-all duration-300 sm:w-[120px] sm:py-2">
+                                <span className="text-[16px] transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0 sm:text-[18px]">
                                     Resume
                                 </span>
                                 <MoveRight
@@ -49,7 +45,7 @@ export default function Home() {
                         </a>
                     </div>
 
-                    <div className="ml-2 flex items-center justify-start gap-x-4 lg:justify-center xl:justify-start">
+                    <div className="ml-2 flex items-center justify-start gap-x-4">
                         <a
                             href="https://www.linkedin.com/in/patricklisiecki"
                             target="_blank"
@@ -70,7 +66,11 @@ export default function Home() {
                 </div>
 
                 <div className="h-[320px] w-[320px] overflow-hidden rounded-xl">
-                    <img src="/profile.png" className="h-full w-full object-cover" alt="Profile Picture" />
+                    <img
+                        src="/profile.webp"
+                        className="animate-liquid h-full w-full border-4 border-divider-secondary object-cover dark:border-divider-primary"
+                        alt="Profile Picture"
+                    />
                 </div>
             </div>
         </section>

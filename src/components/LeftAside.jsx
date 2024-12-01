@@ -25,7 +25,7 @@ export default function LeftAside() {
     };
 
     return (
-        <aside className="dark:bg-background border-divider-secondary dark:text-neutral-dark-primary dark:border-divider-primary text-neutral-light-primary sticky top-0 hidden h-screen w-20 flex-col justify-between border-r-2 backdrop-blur-lg md:flex">
+        <aside className="sticky top-0 hidden h-screen w-20 flex-col justify-between border-r-2 border-divider-secondary text-neutral-light-primary dark:border-divider-primary dark:bg-background dark:text-neutral-dark-primary md:flex">
             <div className="mt-24 flex flex-col items-center">
                 <a
                     href="https://github.com/PatrickLisiecki/personal-site"
@@ -38,10 +38,10 @@ export default function LeftAside() {
             </div>
 
             {showScrollButton && (
-                <div className="group mb-4 flex items-center justify-center">
+                <div className="group mb-6 flex items-center justify-center">
                     <button
                         onClick={scrollToTop}
-                        className="text-neutral-light-primary dark:text-neutral-dark-primary transition-all duration-300 group-hover:text-accent"
+                        className="text-neutral-light-primary transition-all duration-300 group-hover:text-accent dark:text-neutral-dark-primary"
                     >
                         <ArrowUp className="h-8 w-8" />
                     </button>

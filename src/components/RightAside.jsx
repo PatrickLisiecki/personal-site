@@ -4,7 +4,7 @@ import { ScrollText, Sun, Moon, Linkedin, Github } from "lucide-react";
 
 export default function RightAside({ toggleDarkMode, darkMode }) {
     return (
-        <aside className="dark:bg-background border-divider-secondary dark:text-neutral-dark-primary dark:border-divider-primary text-neutral-light-primary sticky top-0 hidden h-screen w-20 flex-col items-center justify-center gap-10 border-l-2 backdrop-blur-lg md:flex">
+        <aside className="sticky top-0 hidden h-screen w-20 flex-col items-center justify-center gap-10 border-l-2 border-divider-secondary text-neutral-light-primary dark:border-divider-primary dark:bg-background dark:text-neutral-dark-primary md:flex">
             <a
                 href="https://www.linkedin.com/in/patricklisiecki"
                 target="_blank"
@@ -31,7 +31,7 @@ export default function RightAside({ toggleDarkMode, darkMode }) {
             </a>
             <button
                 onClick={toggleDarkMode}
-                className="border-none text-primary hover:text-blue-600 dark:text-white dark:hover:text-yellow-500"
+                className="text-primary border-none hover:text-blue-600 dark:text-white dark:hover:text-yellow-500"
             >
                 {darkMode ? <Sun /> : <Moon />}
             </button>

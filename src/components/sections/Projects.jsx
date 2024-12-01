@@ -6,8 +6,10 @@ import { ArrowRight, FolderGit2 } from "lucide-react";
 
 export default function Projects({ projectsData }) {
     const [filteredProjects, setFilteredProjects] = useState(projectsData);
+    const [selectedType, setSelectedType] = useState("all");
 
     const filterProjects = (type) => {
+        setSelectedType(type);
         if (type === "all") {
             setFilteredProjects(projectsData);
         } else {
@@ -16,9 +18,16 @@ export default function Projects({ projectsData }) {
         }
     };
 
+    const filterOptions = {
+        all: "All",
+        web: "Web Dev",
+        os: "OS",
+        games: "Games",
+    };
+
     return (
         <section
-            className="section dark:bg-background dark:text-neutral-dark-primary text-neutral-light-primary"
+            className="section text-neutral-light-primary dark:bg-background dark:text-neutral-dark-primary"
             id="projects"
         >
             <div className="container mx-auto">
@@ -27,35 +36,24 @@ export default function Projects({ projectsData }) {
                     <h3 className="text-[26px] font-semibold uppercase leading-[46px]">My Projects</h3>
                 </div>
 
-                <p className="dark:text-neutral-dark-secondary text-neutral-light-secondary mb-8">
+                <p className="mb-8 text-neutral-light-secondary dark:text-neutral-dark-secondary">
                     Explore some of my recent projects.
                 </p>
 
                 <div className="mb-6 flex gap-x-12">
-                    <button
-                        onClick={() => filterProjects("all")}
-                        className="relative border-b-2 border-transparent transition-all duration-300 hover:border-b-2 hover:border-accent"
-                    >
-                        All
-                    </button>
-                    <button
-                        onClick={() => filterProjects("web")}
-                        className="relative border-b-2 border-transparent transition-all duration-300 hover:border-b-2 hover:border-accent"
-                    >
-                        Web Dev
-                    </button>
-                    <button
-                        onClick={() => filterProjects("os")}
-                        className="relative border-b-2 border-transparent transition-all duration-300 hover:border-b-2 hover:border-accent"
-                    >
-                        OS
-                    </button>
-                    <button
-                        onClick={() => filterProjects("games")}
-                        className="relative border-b-2 border-transparent transition-all duration-300 hover:border-b-2 hover:border-accent"
-                    >
-                        Games
-                    </button>
+                    {Object.entries(filterOptions).map(([type, name], index) => (
+                        <button
+                            key={index}
+                            onClick={() => filterProjects(type)}
+                            className={`border-b-2 ${
+                                selectedType === type
+                                    ? "border-accent"
+                                    : "border-transparent hover:border-neutral-light-primary dark:hover:border-neutral-dark-primary"
+                            }`}
+                        >
+                            {name}
+                        </button>
+                    ))}
                 </div>
 
                 <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
@@ -65,7 +63,7 @@ export default function Projects({ projectsData }) {
                         filteredProjects.map((project, index) => (
                             <div
                                 key={index}
-                                className="dark:border-divider-primary flex flex-col justify-between overflow-hidden rounded-lg border border-gray-200"
+                                className="flex flex-col justify-between overflow-hidden rounded-lg border border-gray-200 dark:border-divider-primary"
                             >
                                 <div className="h-1/2 w-full">
                                     <img src={project.img} alt={project.title} className="h-full w-full object-cover" />
@@ -73,7 +71,7 @@ export default function Projects({ projectsData }) {
                                 <div className="flex flex-col p-4">
                                     <h4 className="mb-2 text-xl font-semibold">{project.title}</h4>
 
-                                    <p className="text-neutral-light-primary dark:text-neutral-dark-secondary mb-4 text-sm">
+                                    <p className="mb-4 text-sm text-neutral-light-primary dark:text-neutral-dark-secondary">
                                         {project.description}
                                     </p>
 

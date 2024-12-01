@@ -7,7 +7,7 @@ import { MoveRight, Linkedin, Github } from "lucide-react";
 export default function Home() {
     return (
         <section
-            className="section h-screen text-neutral-light-primary dark:bg-background dark:text-neutral-dark-primary"
+            className="section h-dvh text-neutral-light-primary dark:bg-background dark:text-neutral-dark-primary"
             id="home"
         >
             <div className="container mx-auto flex flex-col-reverse items-center justify-center gap-y-16 lg:flex-row lg:gap-x-16">

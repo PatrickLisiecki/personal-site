@@ -29,7 +29,7 @@ export const experienceData = [
     {
         role: "Software Engineer Intern",
         company: "Research Foundation of CUNY - Climastry",
-        location: "New York City, NY",
+        location: "New York, NY",
         mode: "Remote",
         time: "Jun. 2024 - Aug. 2024",
         description: "Technologies Used: TypeScript, React, Redux, AWS (S3, Lambda, API Gateway), GitHub Actions",
@@ -38,7 +38,7 @@ export const experienceData = [
     {
         role: "Software Engineer Intern",
         company: "SPEAKHIRE",
-        location: "New York City, NY",
+        location: "New York, NY",
         mode: "Remote",
         time: "Feb. 2024 - Apr. 2024",
         description: "Technologies Used: TypeScript, React, Redux (RTK Query), Material UI, react-i18next Framework",

@@ -31,7 +31,7 @@ function App() {
     }, [darkMode]);
 
     return (
-        <main className="page relative">
+        <main className="relative">
             <Header navData={navData} />
             <div className="flex flex-row">
                 <LeftAside />

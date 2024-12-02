@@ -7,7 +7,7 @@ import { MoveRight, Linkedin, Github } from "lucide-react";
 export default function Home() {
     return (
         <section
-            className="section h-dvh text-neutral-light-primary dark:bg-background dark:text-neutral-dark-primary"
+            className="section min-h-dvh text-neutral-light-primary dark:bg-background dark:text-neutral-dark-primary"
             id="home"
         >
             <div className="container mx-auto flex flex-col-reverse items-center justify-center gap-y-16 lg:flex-row lg:gap-x-16">
@@ -45,11 +45,11 @@ export default function Home() {
                         </a>
                     </div>
 
-                    <div className="ml-2 flex items-center justify-start gap-x-4">
+                    <div className="ml-2 flex items-center justify-start gap-x-6">
                         <a
                             href="https://www.linkedin.com/in/patricklisiecki"
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             className="transition-all duration-300 hover:text-accent"
                         >
                             <Linkedin />
@@ -57,7 +57,7 @@ export default function Home() {
                         <a
                             href="https://github.com/PatrickLisiecki"
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             className="transition-all duration-300 hover:text-accent"
                         >
                             <Github />
@@ -65,7 +65,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="h-[320px] w-[320px] overflow-hidden rounded-xl">
+                <div className="h-[250px] w-[250px] overflow-hidden rounded-xl sm:h-[320px] sm:w-[320px]">
                     <img
                         src="/profile.webp"
                         className="animate-liquid h-full w-full border-4 border-divider-secondary object-cover dark:border-divider-primary"

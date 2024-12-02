@@ -13,11 +13,10 @@ export default function Header({ navData }) {
     };
 
     return (
-        <header className="dark:bg-background border-divider-secondary dark:text-neutral-dark-primary dark:border-divider-primary text-neutral-light-primary fixed z-[999] w-full border-b-2 bg-white p-4 lg:px-24">
+        <header className="fixed z-[999] w-full border-b-2 border-divider-secondary bg-white p-4 text-neutral-light-primary dark:border-divider-primary dark:bg-background dark:text-neutral-dark-primary lg:px-24">
             <div className="flex flex-row items-center justify-between">
                 <Link to="home" smooth={true} duration={500} spy={true} offset={0} className="cursor-pointer">
-                    <span className="text-[24px] uppercase md:text-3xl">PATRICK LISIECKI</span>
-                    <span className="text-3xl text-accent">.</span>
+                    <span className="text-[24px] uppercase md:text-3xl">Patrick Lisiecki</span>
                 </Link>
 
                 <nav className="hidden lg:block">
@@ -53,7 +52,7 @@ export default function Header({ navData }) {
             <nav
                 className={`${
                     isOpen ? "left-0" : "-left-[768px] md:-left-[960px]"
-                } dark:bg-background fixed top-0 z-[999] flex h-screen w-full items-center justify-center bg-white transition-all duration-300 lg:hidden`}
+                } fixed top-0 z-[999] flex h-screen w-full items-center justify-center bg-white transition-all duration-300 dark:bg-background lg:hidden`}
             >
                 <button
                     onClick={toggleMenu}

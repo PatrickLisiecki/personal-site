@@ -57,6 +57,15 @@ export const experienceData = [
 
 export const projectsData = [
     {
+        title: "PickUpNYC",
+        description: "A platform for soccer enthusiasts to connect, organize, and participate in pickup games.",
+        link: "https://github.com/pickupnyc/pickupnyc",
+        demo: "https://pickupnyc.onrender.com/",
+        img: "/pickupnyc.webp",
+        tech: ["/react.svg", "/javascript.svg", "/node.svg", "postgresql.svg"],
+        type: "web",
+    },
+    {
         title: "Spelling Bee App",
         description: "A multilingual study assistant for expanding vocabulary with randomly generated games.",
         link: "https://github.com/PatrickLisiecki/spelling-bee-app",

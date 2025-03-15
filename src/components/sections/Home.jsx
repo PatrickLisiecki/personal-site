@@ -15,8 +15,9 @@ export default function Home() {
                     <h1 className="h1 mb-0 block font-semibold leading-none">Patrick Lisiecki</h1>
                     <h2 className="h2 mb-2 text-[25px] font-semibold text-accent md:text-[40px]">Software Engineer</h2>
 
-                    <p className="mb-4 max-w-[350px] text-[14px] leading-relaxed text-neutral-light-secondary dark:text-neutral-dark-secondary sm:max-w-[425px] sm:text-[18px] xl:max-w-[475px]">
-                        Hello! I'm Patrick Lisiecki, a full-stack software engineer and CS student based in New York. 🗽
+                    <p className="mb-4 max-w-[350px] text-[14px] leading-relaxed text-neutral-light-secondary dark:text-neutral-dark-secondary sm:max-w-[440px] sm:text-[18px] xl:max-w-[475px]">
+                        Hello! I'm Patrick Lisiecki, a full-stack software engineer and CS graduate based in New York.
+                        🗽
                     </p>
 
                     <div className="mb-4 flex items-center justify-start gap-x-4">

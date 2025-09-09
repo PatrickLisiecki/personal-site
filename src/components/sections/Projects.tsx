@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
-
 import { ArrowRight, FolderGit2 } from 'lucide-react';
+import { useState } from 'react';
 
-export default function Projects({ projectsData }) {
-  const [filteredProjects, setFilteredProjects] = useState(projectsData);
-  const [selectedType, setSelectedType] = useState('all');
+import { ProjectsData, ProjectType } from '@/types';
 
-  const filterProjects = (type) => {
+export default function Projects({ projectsData }: { projectsData: ProjectsData }) {
+  const [filteredProjects, setFilteredProjects] = useState<ProjectsData>(projectsData);
+  const [selectedType, setSelectedType] = useState<string>('all');
+
+  const filterProjects = (type: string): void => {
     setSelectedType(type);
     if (type === 'all') {
       setFilteredProjects(projectsData);
@@ -17,7 +17,7 @@ export default function Projects({ projectsData }) {
     }
   };
 
-  const filterOptions = {
+  const filterOptions: Record<ProjectType, string> = {
     all: 'All',
     web: 'Web Dev',
     os: 'OS',
@@ -116,17 +116,3 @@ export default function Projects({ projectsData }) {
     </section>
   );
 }
-
-Projects.propTypes = {
-  projectsData: PropTypes.arrayOf(
-    PropTypes.shape({
-      img: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
-      demo: PropTypes.string,
-      tech: PropTypes.arrayOf(PropTypes.string).isRequired,
-    }),
-  ).isRequired,
-};

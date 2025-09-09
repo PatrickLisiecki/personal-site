@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-
 import { Briefcase } from 'lucide-react';
 
-export default function Experience({ experienceData }) {
+import { ExperienceData } from '@/types';
+
+export default function Experience({ experienceData }: { experienceData: ExperienceData }) {
   return (
     <section
       className="section text-neutral-light-primary dark:bg-background dark:text-neutral-dark-primary"
@@ -61,17 +61,3 @@ export default function Experience({ experienceData }) {
     </section>
   );
 }
-
-Experience.propTypes = {
-  experienceData: PropTypes.arrayOf(
-    PropTypes.shape({
-      img: PropTypes.string.isRequired,
-      company: PropTypes.string.isRequired,
-      location: PropTypes.string.isRequired,
-      time: PropTypes.string.isRequired,
-      mode: PropTypes.string.isRequired,
-      role: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-};

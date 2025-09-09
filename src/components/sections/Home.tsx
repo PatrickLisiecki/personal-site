@@ -1,7 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
+import { Github, Linkedin, MoveRight } from 'lucide-react';
 import { Link } from 'react-scroll';
-
-import { MoveRight, Linkedin, Github } from 'lucide-react';
 
 export default function Home() {
   return (

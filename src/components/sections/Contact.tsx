@@ -1,5 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
-import { Users, Mail, Map, MessageSquare } from 'lucide-react';
+import { Mail, Map, MessageSquare, Users } from 'lucide-react';
 
 export default function Contact() {
   return (

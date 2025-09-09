@@ -1,23 +1,22 @@
+import { ArrowUp, Braces } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
-import { ArrowUp, Braces } from 'lucide-react';
-
 export default function LeftAside() {
-  const [showScrollButton, setShowScrollButton] = useState(false);
+  const [showScrollButton, setShowScrollButton] = useState<boolean>(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (): void => {
       setShowScrollButton(window.scrollY > 0);
     };
 
     window.addEventListener('scroll', handleScroll);
 
-    return () => {
+    return (): void => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const scrollToTop = () => {
+  const scrollToTop = (): void => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',

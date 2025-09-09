@@ -1,13 +1,13 @@
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-scroll';
-import PropTypes from 'prop-types';
 
-import { X, Menu } from 'lucide-react';
+import { NavData } from '@/types';
 
-export default function Header({ navData }) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Header({ navData }: { navData: NavData }) {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = (): void => {
     setIsOpen(!isOpen);
   };
 
@@ -84,12 +84,3 @@ export default function Header({ navData }) {
     </header>
   );
 }
-
-Header.propTypes = {
-  navData: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-};

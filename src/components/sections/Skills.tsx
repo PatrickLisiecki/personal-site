@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-
 import { ArrowRight, Code } from 'lucide-react';
 
-export default function Skills({ skillsData }) {
+import { SkillsData } from '@/types';
+
+export default function Skills({ skillsData }: { skillsData: SkillsData }) {
   return (
     <section
       className="section text-neutral-light-primary dark:bg-background dark:text-neutral-dark-primary"
@@ -46,13 +46,3 @@ export default function Skills({ skillsData }) {
     </section>
   );
 }
-
-Skills.propTypes = {
-  skillsData: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
-      img: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-};

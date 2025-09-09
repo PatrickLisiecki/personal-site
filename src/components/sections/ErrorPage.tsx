@@ -1,8 +1,7 @@
 import { useRouteError } from 'react-router-dom';
 
 export default function ErrorPage() {
-  const error = useRouteError();
-  console.error(error);
+  const error = useRouteError() as any;
 
   return (
     <div className="absolute top-1/4 flex w-full flex-col items-center justify-center text-3xl">

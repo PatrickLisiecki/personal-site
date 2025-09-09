@@ -1,28 +1,22 @@
-import { useState, useEffect } from 'react';
+import { Moon, Sun } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import LeftAside from '@/components/LeftAside';
 import RightAside from '@/components/RightAside';
-
-import Home from '@/components/sections/Home';
 import About from '@/components/sections/About';
-import Experience from '@/components/sections/Experience';
-import Skills from '@/components/sections/Skills';
-import Projects from '@/components/sections/Projects';
 import Contact from '@/components/sections/Contact';
-
-import { navData } from '@/data/data';
-import { experienceData } from '@/data/data';
-import { skillsData } from '@/data/data';
-import { projectsData } from '@/data/data';
-
-import { Sun, Moon } from 'lucide-react';
+import Experience from '@/components/sections/Experience';
+import Home from '@/components/sections/Home';
+import Projects from '@/components/sections/Projects';
+import Skills from '@/components/sections/Skills';
+import { experienceData, navData, projectsData, skillsData } from '@/data/data';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState<boolean>(true);
 
-  const toggleDarkMode = () => {
+  const toggleDarkMode = (): void => {
     setDarkMode(!darkMode);
   };
 

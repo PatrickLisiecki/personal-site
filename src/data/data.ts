@@ -1,4 +1,6 @@
-export const navData = [
+import { ExperienceData, NavData, ProjectsData, SkillsData } from '@/types';
+
+export const navData: NavData = [
   {
     title: 'Home',
     link: '#home',
@@ -25,7 +27,7 @@ export const navData = [
   },
 ];
 
-export const experienceData = [
+export const experienceData: ExperienceData = [
   {
     role: 'Software Engineer Intern',
     company: 'Research Foundation of CUNY - Climastry',
@@ -58,7 +60,7 @@ export const experienceData = [
   },
 ];
 
-export const projectsData = [
+export const projectsData: ProjectsData = [
   {
     title: 'PickUpNYC',
     description:
@@ -120,7 +122,7 @@ export const projectsData = [
   },
 ];
 
-export const skillsData = [
+export const skillsData: SkillsData = [
   {
     title: 'TypeScript',
     type: 'Programming Language',

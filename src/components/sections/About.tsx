@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { BookOpenTextIcon } from 'lucide-react';
 
 export default function About() {

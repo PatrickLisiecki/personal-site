@@ -1,8 +1,12 @@
-import PropTypes from 'prop-types';
+import { Github, Linkedin, Moon, ScrollText, Sun } from 'lucide-react';
 
-import { ScrollText, Sun, Moon, Linkedin, Github } from 'lucide-react';
-
-export default function RightAside({ toggleDarkMode, darkMode }) {
+export default function RightAside({
+  toggleDarkMode,
+  darkMode,
+}: {
+  toggleDarkMode: () => void;
+  darkMode: boolean;
+}) {
   return (
     <aside className="sticky top-0 hidden h-screen w-20 flex-col items-center justify-center gap-10 border-l-2 border-divider-secondary text-neutral-light-primary dark:border-divider-primary dark:bg-background dark:text-neutral-dark-primary md:flex">
       <a
@@ -38,8 +42,3 @@ export default function RightAside({ toggleDarkMode, darkMode }) {
     </aside>
   );
 }
-
-RightAside.propTypes = {
-  toggleDarkMode: PropTypes.func.isRequired,
-  darkMode: PropTypes.bool.isRequired,
-};
